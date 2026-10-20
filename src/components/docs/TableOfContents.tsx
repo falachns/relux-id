@@ -101,10 +101,10 @@ export function TableOfContents({ activePage }: { activePage: unknown }) {
 
   return (
     <nav aria-label={t.toc} className="w-full">
-      <div className="mb-3 flex items-center gap-2 ps-3 text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">
+      <div className="mb-4 flex items-center gap-2 ps-3 text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100">
         <span>{t.tocTitle}</span>
       </div>
-      <ul className="relative space-y-1.5 border-s border-border ps-0">
+      <ul className="relative space-y-0.5 border-s border-slate-200 dark:border-slate-800 ps-0">
         {entries.map((entry) => {
           const isActive = entry.id === activeId
           const isSub = entry.level === 3
@@ -124,13 +124,13 @@ export function TableOfContents({ activePage }: { activePage: unknown }) {
                   document.getElementById(entry.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
                 }}
                 className={
-                  'block pe-2 py-0.5 leading-snug rounded-e-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ' +
-                  (isSub ? 'ps-6 text-xs ' : 'ps-3 text-sm ') +
+                  'block pe-2 py-1 leading-snug rounded-e-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ' +
+                  (isSub ? 'ps-6 text-xs ' : 'ps-3 text-xs ') +
                   (isActive
-                    ? 'font-medium text-primary bg-primary/5'
+                    ? 'font-bold text-primary bg-primary/5'
                     : isSub
-                      ? 'text-slate-600 dark:text-slate-300 hover:text-primary hover:font-medium hover:bg-muted/40'
-                      : 'text-slate-700 dark:text-slate-200 hover:text-primary hover:font-medium hover:bg-muted/40')
+                      ? 'text-slate-600 dark:text-slate-300 font-medium hover:text-slate-900 dark:hover:text-white hover:bg-muted/40'
+                      : 'text-slate-700 dark:text-slate-200 font-medium hover:text-slate-900 dark:hover:text-white hover:bg-muted/40')
                 }
               >
                 {entry.label}

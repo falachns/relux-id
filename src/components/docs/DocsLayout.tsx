@@ -97,7 +97,7 @@ export function DocsLayout({
         {/* Desktop sidebar */}
         <aside
           aria-label={t.navAside}
-          className="sticky top-16 hidden h-[calc(100vh-4rem)] overflow-y-auto border-r border-border pl-4 lg:block"
+          className="sticky top-16 hidden h-[calc(100vh-4rem)] overflow-y-auto overscroll-contain border-r border-slate-200 dark:border-slate-800 pl-4 pr-3 pb-16 lg:block"
         >
           <Sidebar active={active} onNavigate={navigate} query={query} />
         </aside>
@@ -158,7 +158,7 @@ export function DocsLayout({
         {/* Table of Contents — desktop xl+ */}
         <aside
           aria-label={t.toc}
-          className="sticky top-16 hidden h-[calc(100vh-4rem)] overflow-y-auto px-4 pt-8 xl:block"
+          className="sticky top-20 hidden h-[calc(100vh-5rem)] overflow-y-auto overscroll-contain py-4 px-4 pr-2 xl:block"
         >
           <TableOfContents activePage={active} />
         </aside>

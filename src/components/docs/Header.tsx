@@ -88,9 +88,9 @@ export function Header({
             onChange={(e) => onQuery(e.target.value)}
             placeholder={t.searchPlaceholder}
             aria-label={t.search}
-            className="w-full rounded-lg border border-border bg-input-background py-2 ps-9 pe-12 text-base text-foreground placeholder:text-muted-foreground transition-[border-color,box-shadow] hover:border-muted-foreground focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30 sm:text-sm cursor-pointer"
+            className="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 py-2 ps-9 pe-12 text-sm text-slate-800 dark:text-slate-200 placeholder:text-slate-500 dark:placeholder:text-slate-400 transition-[border-color,box-shadow] hover:border-slate-400 dark:hover:border-slate-600 focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30 cursor-pointer"
           />
-          <kbd className="pointer-events-none absolute end-2.5 top-1/2 -translate-y-1/2 rounded border border-border/80 bg-muted px-1.5 py-0.5 font-mono text-xs font-semibold leading-none text-slate-700 dark:text-slate-200 shadow-2xs">
+          <kbd className="pointer-events-none absolute end-2.5 top-1/2 -translate-y-1/2 rounded-md border border-slate-300 dark:border-slate-600 bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 font-mono text-xs font-bold leading-none text-slate-700 dark:text-slate-200 shadow-2xs">
             ⌘K
           </kbd>
         </div>
@@ -98,7 +98,7 @@ export function Header({
         <div
           role="radiogroup"
           aria-label={t.language}
-          className="ml-auto flex gap-1 rounded-xl border border-border bg-secondary p-1 sm:ml-0"
+          className="ml-auto flex gap-1 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 p-1 sm:ml-0"
         >
           {LANGS.map((l) => {
             const on = lang === l.value
@@ -120,7 +120,7 @@ export function Header({
                 }
                 className={
                   'rounded-lg px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
-                  (on ? 'bg-card text-primary shadow-sm' : 'text-slate-600 dark:text-slate-300 hover:text-primary font-semibold')
+                  (on ? 'bg-card text-primary shadow-sm' : 'text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white')
                 }
               >
                 {l.short}

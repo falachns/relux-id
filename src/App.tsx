@@ -127,8 +127,41 @@ function AppInner() {
       <div className="mx-auto max-w-3xl">
         <Suspense
           fallback={
-            <div role="status" className="relux-card p-6 text-sm text-muted-foreground">
-              {lang === 'en' ? 'Loading documentation…' : 'Memuat dokumentasi…'}
+            <div
+              role="status"
+              aria-label={lang === 'en' ? 'Loading documentation…' : 'Memuat dokumentasi…'}
+              className="flex min-h-[60vh] flex-col items-center justify-center gap-4 animate-[fadeIn_0.3s_ease-in]"
+            >
+              <svg
+                className="size-7 animate-spin text-primary opacity-70"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                />
+              </svg>
+              <div className="space-y-3 w-full max-w-xl px-4">
+                <div className="h-8 w-2/3 rounded-xl bg-slate-200 dark:bg-slate-800 animate-pulse" />
+                <div className="h-3 w-full rounded-lg bg-slate-100 dark:bg-slate-800/60 animate-pulse delay-75" />
+                <div className="h-3 w-5/6 rounded-lg bg-slate-100 dark:bg-slate-800/60 animate-pulse delay-100" />
+                <div className="h-3 w-4/6 rounded-lg bg-slate-100 dark:bg-slate-800/60 animate-pulse delay-150" />
+              </div>
+              <span className="sr-only">
+                {lang === 'en' ? 'Loading documentation…' : 'Memuat dokumentasi…'}
+              </span>
             </div>
           }
         >

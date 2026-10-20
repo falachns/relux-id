@@ -24,8 +24,8 @@ export function PageHeader({
   badge,
   version = 'v1.0.0',
   packageName,
-  figmaUrl = 'https://relux-kai.figma.site/',
-  githubUrl = 'https://github.com/keretaapikita/relux',
+  figmaUrl = 'https://www.figma.com/design/Lbqu1BYMXUvO0h9p04G8rz/Design-System-KAI-v.1?m=auto&t=cYWauGA96ZUpgiwM-6',
+  githubUrl = 'https://github.com/falachns/relux-id',
   children,
   className = '',
 }: PageHeaderProps) {
@@ -93,11 +93,11 @@ export function PageHeader({
               href={figmaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relux-focus inline-flex h-7 items-center gap-1.5 rounded-md border border-border bg-card px-2.5 font-medium text-slate-700 dark:text-slate-200 hover:text-foreground hover:border-primary/40 transition-colors shadow-xs"
+              className="relux-focus inline-flex h-7 items-center gap-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 text-xs font-semibold text-slate-800 dark:text-slate-200 shadow-2xs hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-400 transition-colors"
             >
               <Figma className="size-3.5 text-primary" aria-hidden="true" />
               <span>Figma Spec</span>
-              <ExternalLink className="size-3 text-muted-foreground/60" aria-hidden="true" />
+              <ExternalLink className="size-3 text-slate-400 dark:text-slate-500" aria-hidden="true" />
             </a>
           )}
 
@@ -106,7 +106,7 @@ export function PageHeader({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relux-focus inline-flex h-7 items-center gap-1.5 rounded-md border border-border bg-card px-2.5 font-medium text-slate-700 dark:text-slate-200 hover:text-foreground hover:border-primary/40 transition-colors shadow-xs"
+              className="relux-focus inline-flex h-7 items-center gap-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 text-xs font-semibold text-slate-800 dark:text-slate-200 shadow-2xs hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-400 transition-colors"
             >
               <Github className="size-3.5 text-foreground" aria-hidden="true" />
               <span>Repository</span>
