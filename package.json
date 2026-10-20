@@ -11,8 +11,9 @@
     "parity:check": "node scripts/check-framework-parity.mjs",
     "llms:generate": "node scripts/generate-llms-full.mjs",
     "typecheck": "tsc --noEmit",
-    "prebuild": "pnpm tokens:check && pnpm snippets:check && pnpm parity:check && pnpm typecheck && node scripts/generate-llms-full.mjs && pnpm build:packages",
-    "build": "pnpm build:packages && vite build",
+    "build": "vite build",
+    "build:all": "node scripts/build-packages.mjs && vite build",
+    "audit:all": "pnpm tokens:check && pnpm snippets:check && pnpm parity:check && pnpm typecheck",
     "build:packages": "node scripts/build-packages.mjs",
     "preview": "vite preview",
     "format": "oxfmt"
