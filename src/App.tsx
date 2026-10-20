@@ -1,7 +1,8 @@
-import { lazy, Suspense, useMemo, useState, type ComponentType } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useState, type ComponentType } from 'react'
 import { DocsLayout } from './components/docs/DocsLayout'
 import { PAGE_ORDER, type SectionId } from './lib/nav'
 import { LangProvider, useLang } from './lib/i18n'
+import { PageNavigation } from './components/docs/PageNavigation'
 
 type PageProps = { onNavigate: (section: SectionId) => void }
 
@@ -62,7 +63,32 @@ const PAGES: Record<SectionId, ReturnType<typeof lazy>> = {
   manage: page(() => import('./pages/ManagePage'), 'ManagePage'),
 }
 
-import { PageNavigation } from './components/docs/PageNavigation'
+function parseSectionFromUrl(): SectionId {
+  if (typeof window === 'undefined') return 'introduction'
+
+  // 1. Check hash first (#manage, #button, etc.)
+  const hash = window.location.hash.replace(/^#\/?/, '').toLowerCase()
+  if (hash && hash in PAGES) return hash as SectionId
+
+  // 2. Check pathname (/manage, /theming, /components/button, /examples/login, etc.)
+  const cleanPath = window.location.pathname.replace(/^\/|\/$/g, '').toLowerCase()
+  if (!cleanPath) return 'introduction'
+
+  if (cleanPath in PAGES) return cleanPath as SectionId
+
+  // Extract last segment: /components/button -> button, /examples/login -> example-login
+  const segments = cleanPath.split('/')
+  const lastSegment = segments[segments.length - 1]
+
+  if (lastSegment in PAGES) return lastSegment as SectionId
+  if (`example-${lastSegment}` in PAGES) return `example-${lastSegment}` as SectionId
+
+  // Common aliases
+  if (lastSegment === 'colors') return 'warna'
+  if (lastSegment === 'typography') return 'tipografi'
+
+  return 'introduction'
+}
 
 export default function App() {
   return (
@@ -73,12 +99,26 @@ export default function App() {
 }
 
 function AppInner() {
-  const [section, setSection] = useState<SectionId>('introduction')
+  const [section, setSection] = useState<SectionId>(() => parseSectionFromUrl())
   const { lang } = useLang()
-  const ActivePage = useMemo(() => PAGES[section], [section])
+  const ActivePage = useMemo(() => PAGES[section] || PAGES.introduction, [section])
 
-  const navigate = (next: SectionId) => {
+  useEffect(() => {
+    const handlePopState = () => {
+      setSection(parseSectionFromUrl())
+    }
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [])
+
+  const navigate = (next: SectionId, pushState = true) => {
     setSection(next)
+    if (pushState && typeof window !== 'undefined') {
+      const targetPath = next === 'introduction' ? '/' : `/${next}`
+      if (window.location.pathname !== targetPath) {
+        window.history.pushState({ section: next }, '', targetPath)
+      }
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -99,3 +139,4 @@ function AppInner() {
     </DocsLayout>
   )
 }
+

@@ -3,8 +3,6 @@
   "framework": "vite",
   "buildCommand": "pnpm build",
   "outputDirectory": "dist",
-  "cleanUrls": true,
-  "trailingSlash": false,
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -70,7 +68,7 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!assets/|llms\\.txt|llms-full\\.txt|tokens\\.css|tokens\\.json|favicon\\.svg|robots\\.txt|sitemap\\.xml|ai-catalog\\.json|\\.well-known/).*)",
       "destination": "/index.html"
     }
   ]
