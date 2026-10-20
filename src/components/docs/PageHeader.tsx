@@ -93,11 +93,11 @@ export function PageHeader({
               href={figmaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relux-focus inline-flex h-7 items-center gap-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 text-xs font-semibold text-slate-800 dark:text-slate-200 shadow-2xs hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-400 transition-colors"
+              className="relux-focus inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-2xs hover:bg-slate-50 hover:border-slate-300 transition-colors"
             >
               <Figma className="size-3.5 text-primary" aria-hidden="true" />
               <span>Figma Spec</span>
-              <ExternalLink className="size-3 text-slate-400 dark:text-slate-500" aria-hidden="true" />
+              <ExternalLink className="size-3 text-slate-400" aria-hidden="true" />
             </a>
           )}
 
@@ -106,11 +106,11 @@ export function PageHeader({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relux-focus inline-flex h-7 items-center gap-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 text-xs font-semibold text-slate-800 dark:text-slate-200 shadow-2xs hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-400 transition-colors"
+              className="relux-focus inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-2xs hover:bg-slate-50 hover:border-slate-300 transition-colors"
             >
-              <Github className="size-3.5 text-foreground" aria-hidden="true" />
+              <Github className="size-3.5 text-slate-700" aria-hidden="true" />
               <span>Repository</span>
-              <ExternalLink className="size-3 text-muted-foreground/60" aria-hidden="true" />
+              <ExternalLink className="size-3 text-slate-400" aria-hidden="true" />
             </a>
           )}
         </div>

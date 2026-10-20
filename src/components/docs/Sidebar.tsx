@@ -47,7 +47,7 @@ export function Sidebar({
                 }))
               }
               aria-expanded={!isCollapsed}
-              className="mb-1 flex w-full items-center justify-between px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded-md"
+              className="mb-1 flex w-full items-center justify-between px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded-md"
             >
               <span>{label(group)}</span>
               <svg
@@ -82,12 +82,12 @@ export function Sidebar({
                         onClick={() => item.section && onNavigate(item.section)}
                         aria-current={isActive ? 'page' : undefined}
                         className={
-                          'group relative flex w-full items-center justify-between rounded-lg pe-2.5 ps-3 text-left text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ' +
+                          'group relative flex w-full items-center justify-between rounded-lg pe-2.5 ps-3 text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ' +
                           (isActive
-                            ? 'bg-primary/10 font-semibold text-primary border-l-2 border-primary rounded-l-none py-2'
+                            ? 'bg-blue-50 text-blue-700 font-semibold border-l-3 border-blue-700 rounded-l-none py-2 text-sm'
                             : clickable
-                              ? 'cursor-pointer text-slate-700 dark:text-slate-300 font-medium py-1.5 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60'
-                              : 'cursor-not-allowed text-slate-400 dark:text-slate-600 py-1.5')
+                              ? 'cursor-pointer text-slate-700 hover:text-slate-900 hover:bg-slate-100 font-medium text-sm py-1.5'
+                              : 'cursor-not-allowed text-slate-400 py-1.5 text-sm')
                         }
                       >
                         {isActive && (
@@ -98,7 +98,7 @@ export function Sidebar({
                         )}
                         <span className="truncate">{label(item)}</span>
                         {item.soon && (
-                          <span className="rounded-md border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 font-mono text-xs leading-none uppercase tracking-wider text-slate-700 dark:text-slate-300 font-semibold">
+                          <span className="rounded-md border border-slate-300 bg-slate-100 px-1.5 py-0.5 font-mono text-xs leading-none uppercase tracking-wider text-slate-700 font-semibold">
                             {t.soon}
                           </span>
                         )}
