@@ -30,11 +30,11 @@ export function Breadcrumb({
 
   return (
     <nav aria-label={ariaLabel} className={clsx('w-full', className)} {...props}>
-      <ol className="flex flex-wrap items-center gap-1.5 text-sm">
+      <ol className="flex flex-wrap items-center gap-2 text-sm">
         {items.map((item, i) => {
           const isLast = i === items.length - 1
           return (
-            <li key={i} className="flex items-center gap-1.5">
+            <li key={i} className="flex items-center gap-2">
               {isLast ? (
                 <span
                   aria-current="page"

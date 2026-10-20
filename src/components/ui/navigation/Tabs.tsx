@@ -87,7 +87,7 @@ export function Tabs({
         className={clsx(
           variant === 'pill'
             ? 'inline-flex flex-wrap gap-1 rounded-xl border border-border bg-secondary p-1'
-            : 'flex gap-6 border-b border-border',
+            : 'relative flex gap-6 border-b border-border',
         )}
       >
         {items.map((tab, i) => {
@@ -107,19 +107,19 @@ export function Tabs({
               onClick={() => handleSelect(i)}
               onKeyDown={(e) => handleKeyDown(e, i)}
               className={clsx(
-                'text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+                'text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
                 variant === 'pill'
                   ? clsx(
-                      'rounded-md px-3.5 py-1.5',
+                      'rounded-lg px-3.5 py-1.5',
                       isSelected
-                        ? 'bg-card text-primary shadow-xs'
+                        ? 'bg-card text-primary shadow-xs font-semibold'
                         : 'text-muted-foreground hover:text-foreground',
                     )
                   : clsx(
-                      '-mb-px border-b-2 py-3 px-1',
+                      'relative z-10 -mb-px border-b-2 py-3 px-1 transition-colors',
                       isSelected
-                        ? 'border-primary text-primary'
-                        : 'border-transparent text-muted-foreground hover:text-foreground',
+                        ? 'border-primary text-primary font-semibold'
+                        : 'border-transparent text-muted-foreground hover:border-border/60 hover:text-foreground',
                     ),
                 tab.disabled && 'cursor-not-allowed opacity-50',
               )}

@@ -119,7 +119,7 @@ export function Header({
                   handleLanguageKey(event, LANGS.indexOf(l))
                 }
                 className={
-                  'rounded-md px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
+                  'rounded-lg px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
                   (on ? 'bg-card text-primary shadow-sm' : 'text-muted-foreground hover:text-primary')
                 }
               >

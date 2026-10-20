@@ -1,45 +1,41 @@
-# RelUX by KAI — Design System KAI v1
+# RelUX Design System by KAI
 
-> Dokumentasi bilingual (ID/EN) untuk Make Kit `@make-kits/design-system-kai-v-1@0.0.2`.
-> Bilingual ID/EN documentation for Make Kit `@make-kits/design-system-kai-v-1@0.0.2`.
+> RelUX adalah design system internal PT Kereta Api Indonesia (Persero) — single source of truth untuk komponen antarmuka, token desain kanonikal Make Kit v1, dan panduan visual lintas framework (Laravel Livewire Blade, React, dan Angular).
 
-## Foundations / Fondasi
+## Core Documentation
 
-- Logo
-- Colors / Warna — generated canonical token catalog
-- Typography / Tipografi — 54 Make Kit classes
-- Spacing & Grid
-- Radius, Effects & Shadow
-- Iconography / Ikonografi
-- Component States / State komponen
+- [Overview](https://relux-id.vercel.app/): Panduan pengenalan, prinsip desain, dan standar konsistensi RelUX KAI
+- [Getting Started](https://relux-id.vercel.app/getting-started): Panduan instalasi dan integrasi paket di project Laravel, React, dan Angular
+- [CLI & Developer Tools](https://relux-id.vercel.app/cli): Otomatisasi penambahan komponen via php artisan relux:* dan npx @kai/relux
+- [Theming Engine & Contrast](https://relux-id.vercel.app/theming): Generator palet warna dinamis dan validasi kepatuhan kontras WCAG 2.1 AA/AAA
+- [Changelog](https://relux-id.vercel.app/changelog): Riwayat versi library, changelog fitur, dan roadmap rilis resmi
 
-## Components / Komponen
+## Design Foundations & Tokens
 
-- Button
-- Form Controls
-- Badges & Tags
-- Alert & Banner
-- Cards
-- Data Table
-- Navigation
-- Modal & Dialog
-- Avatars
-- Progress
-- App UI Components
+- [Canonical CSS Tokens](https://relux-id.vercel.app/tokens.css): 597 token variabel CSS Make Kit Design System KAI v1 resmi
+- [W3C Design Tokens JSON](https://relux-id.vercel.app/tokens.json): Kamus token terstruktur format W3C Design Tokens Community Group
+- [Colors](https://relux-id.vercel.app/colors): Palet warna brand KAI Navy (#002A54), KAI Orange (#ED6B23), dan semantik
+- [Typography](https://relux-id.vercel.app/typography): Skala 54 kelas tipografi Inter (UI) dan Roboto Mono (Data/Code)
+- [Spacing & Grid](https://relux-id.vercel.app/spacing): Skala spasial modular berbasis kelipatan grid 4px dan 8px kanonikal
+- [Radius & Shadow](https://relux-id.vercel.app/radius): Border radius konsentris dan 21 token shadow elevation Make Kit
 
-## RelUX extensions
+## Base Components
 
-- Accordion
-- Interactive state reference
+- [Button](https://relux-id.vercel.app/button): Tombol aksi dengan touch target 44px dan 8 varian sub-brand korporasi KAI
+- [Alert & Banner](https://relux-id.vercel.app/alert): Komponen feedback banner kontekstual untuk status info, sukses, peringatan, dan bahaya
+- [Badges & Tags](https://relux-id.vercel.app/badge): Lencana status visual, label kategori konsentris, dan penanda counter numerik
+- [Cards](https://relux-id.vercel.app/card): Kontainer kartu berbasis formula concentric radius dengan varian elevated, flat, dan outlined
+- [Form Controls](https://relux-id.vercel.app/form): Input teks, Select, Textarea, Checkbox, Radio, dan Switch dengan proteksi auto-zoom Safari
+- [Modal & Dialog](https://relux-id.vercel.app/modal): Dialog modal aksesibel dengan focus trap, escape key dismiss, dan backdrop blur
+- [Accordion](https://relux-id.vercel.app/accordion): Panel lipat/buka konten progresif dengan transisi animasi halus
+- [Avatars](https://relux-id.vercel.app/avatar): Penampil foto profil pegawai/penumpang dan fallback inisial dengan badge status
+- [Progress](https://relux-id.vercel.app/progress): Indikator progres linear dan sirkular deterministik dan indeterministik
+- [Data Table](https://relux-id.vercel.app/table): Tabel data tabular responsif untuk manifest perjalanan dan data operasional
 
-## Examples / Contoh
+## Application UI
 
-- KAI Operations Dashboard / Dashboard Operasi KAI
-- KAI Landing Page
-- Google Authenticator Guide for ESA Web and ESA Mobile
+- [Application UI Primitives](https://relux-id.vercel.app/app-ui): Modul Stepper alur booking, Empty State, File Upload presisi, dan Date Picker
 
-## Code
+## Comprehensive AI Context
 
-Every component group includes React and executable HTML + CSS examples. Interactive
-HTML examples also include JavaScript. All authored styling resolves to CSS variables
-from the Make Kit; Inter is the only UI font.
+- [Full LLM Specification Context](https://relux-id.vercel.app/llms-full.txt): Konteks komprehensif seluruh komponen, token, dan arsitektur monorepo untuk agentic browsing

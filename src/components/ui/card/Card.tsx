@@ -26,7 +26,7 @@ export function Card({
   return (
     <Component
       className={clsx(
-        'relux-card flex flex-col overflow-hidden',
+        'relux-card flex flex-col overflow-hidden rounded-xl',
         variantClass,
         className,
       )}
@@ -44,7 +44,7 @@ export type CardHeaderProps = HTMLAttributes<HTMLDivElement> & {
 export function CardHeader({ className, children, ...props }: CardHeaderProps) {
   return (
     <div
-      className={clsx('flex flex-col gap-1.5 p-5 pb-0', className)}
+      className={clsx('flex flex-col gap-2 p-5 pb-0', className)}
       {...props}
     >
       {children}

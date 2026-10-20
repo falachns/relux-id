@@ -54,7 +54,7 @@ export function SearchBookWidget({
       aria-label="Cari tiket kereta"
     >
       <div className="grid items-end gap-3 sm:grid-cols-[1fr_auto_1fr]">
-        <div className="flex flex-col gap-1.5">
+        <div className="flex flex-col gap-2">
           <label
             htmlFor="widget-origin"
             className="text-sm font-semibold text-foreground"
@@ -78,7 +78,7 @@ export function SearchBookWidget({
           <ArrowLeftRight aria-hidden="true" className="size-4" />
         </button>
 
-        <div className="flex flex-col gap-1.5">
+        <div className="flex flex-col gap-2">
           <label
             htmlFor="widget-destination"
             className="text-sm font-semibold text-foreground"
@@ -95,7 +95,7 @@ export function SearchBookWidget({
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">
-        <div className="flex flex-col gap-1.5">
+        <div className="flex flex-col gap-2">
           <label
             htmlFor="widget-date"
             className="text-sm font-semibold text-foreground"
@@ -111,7 +111,7 @@ export function SearchBookWidget({
           />
         </div>
 
-        <div className="flex flex-col gap-1.5">
+        <div className="flex flex-col gap-2">
           <label
             htmlFor="widget-pax"
             className="text-sm font-semibold text-foreground"

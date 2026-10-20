@@ -45,10 +45,10 @@ export function FormField({
     .join(' ') || undefined
 
   return (
-    <div className={clsx('flex flex-col gap-1.5', className)} {...props}>
+    <div className={clsx('flex flex-col gap-2', className)} {...props}>
       <label
         htmlFor={fieldId}
-        className="text-sm font-semibold text-foreground flex items-center gap-1"
+        className="text-sm font-semibold text-foreground flex items-center gap-1 select-none"
       >
         <span>{label}</span>
         {required && (
@@ -78,7 +78,7 @@ export function FormField({
           : children}
 
       {hasError ? (
-        <p id={errorId} role="alert" className="text-xs text-destructive mt-0.5">
+        <p id={errorId} role="alert" className="text-xs font-medium text-destructive mt-0.5 flex items-center gap-1">
           {error}
         </p>
       ) : hasHint ? (

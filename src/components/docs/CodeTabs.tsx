@@ -207,11 +207,11 @@ Uses canonical Make Kit KAI v1 variables (\`--colors/kai/...\`, \`--radius-...\`
   return (
     <div className="space-y-3">
       {/* Tab controls & action bar */}
-      <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div
           role="tablist"
           aria-label={lang === 'en' ? 'Framework switcher & preview' : 'Pilihan framework & pratinjau'}
-          className="flex flex-wrap gap-1 rounded-lg border border-border/80 bg-muted/60 p-1 shadow-inner/10"
+          className="flex flex-wrap gap-1 rounded-xl border border-border/80 bg-muted/60 p-1 shadow-inner/10"
         >
           {tabList.map((item, i) => {
             const isSelected = item.id === activeId
@@ -226,7 +226,7 @@ Uses canonical Make Kit KAI v1 variables (\`--colors/kai/...\`, \`--radius-...\`
                 onClick={() => handleSelectTab(item)}
                 onKeyDown={(e) => handleKeyDown(e, i)}
                 className={
-                  'rounded-md px-3 py-1.5 text-xs sm:text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
+                  'rounded-lg px-3 py-1.5 text-xs sm:text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
                   (isSelected
                     ? 'bg-card text-foreground shadow-xs font-semibold'
                     : 'text-muted-foreground hover:text-foreground hover:bg-card/40')

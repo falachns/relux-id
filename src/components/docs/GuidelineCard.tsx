@@ -30,7 +30,7 @@ export function GuidelineCard({
         } ${className}`
       }
     >
-      <div className="mb-4 flex items-center gap-2.5">
+      <div className="mb-4 flex items-center gap-3">
         <span
           className={
             'flex size-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ' +
@@ -47,9 +47,9 @@ export function GuidelineCard({
         </h3>
       </div>
       {items && items.length > 0 && (
-        <ul className="space-y-2.5 text-xs sm:text-sm text-muted-foreground">
+        <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground">
           {items.map((item, idx) => (
-            <li key={idx} className="flex items-start gap-2.5">
+            <li key={idx} className="flex items-start gap-2">
               <span
                 className={`mt-1 flex size-4 shrink-0 items-center justify-center rounded-full ${
                   isDo ? 'text-success bg-success-soft/60' : 'text-destructive bg-danger-soft/60'

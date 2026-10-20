@@ -30,7 +30,7 @@ export function Radio({
   return (
     <label
       htmlFor={id}
-      className="flex min-h-6 cursor-pointer items-start gap-2.5 text-sm text-foreground select-none"
+      className="flex min-h-6 cursor-pointer items-start gap-2 text-sm text-foreground select-none"
     >
       <span className="mt-0.5">{content}</span>
       <div>
