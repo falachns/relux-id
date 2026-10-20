@@ -28,6 +28,8 @@ react(),
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
+        '@make-kits/design-system-kai-v-1/style.css': path.resolve(__dirname, './vendor/design-system-kai-v1/style.css'),
+        '@make-kits/design-system-kai-v-1': path.resolve(__dirname, './vendor/design-system-kai-v1'),
       },
     },
     server: {

@@ -12,12 +12,12 @@ await mkdir(distDir, { recursive: true })
 const pkg = {
   name: '@make-kits/design-system-kai-v-1',
   version: KIT_VERSION,
-  main: 'dist/style.css',
-  style: 'dist/style.css',
+  main: 'style.css',
+  style: 'style.css',
   exports: {
-    '.': './dist/style.css',
-    './style.css': './dist/style.css',
-    './dist/style.css': './dist/style.css',
+    '.': './style.css',
+    './style.css': './style.css',
+    './dist/style.css': './style.css',
   },
 }
 await writeFile(
