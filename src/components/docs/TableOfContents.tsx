@@ -101,10 +101,10 @@ export function TableOfContents({ activePage }: { activePage: unknown }) {
 
   return (
     <nav aria-label={t.toc} className="w-full">
-      <div className="mb-4 flex items-center gap-2 ps-3 text-xs font-bold uppercase tracking-wider text-slate-900">
+      <div className="mb-4 flex items-center gap-2 ps-3 text-xs font-bold uppercase tracking-wider text-foreground">
         <span>{t.tocTitle}</span>
       </div>
-      <ul className="relative space-y-0.5 border-s border-slate-200 ps-0">
+      <ul className="relative space-y-0.5 border-s border-border ps-0">
         {entries.map((entry) => {
           const isActive = entry.id === activeId
           const isSub = entry.level === 3
@@ -113,7 +113,7 @@ export function TableOfContents({ activePage }: { activePage: unknown }) {
               {/* Active vertical accent bar on the left edge */}
               {isActive && (
                 <span
-                  className="absolute -start-px top-0.5 bottom-0.5 w-0.5 rounded-full bg-blue-700"
+                  className="absolute -start-px top-0.5 bottom-0.5 w-0.5 rounded-full bg-primary"
                   aria-hidden="true"
                 />
               )}
@@ -127,8 +127,8 @@ export function TableOfContents({ activePage }: { activePage: unknown }) {
                   'block pe-2 py-1 leading-snug rounded-e-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ' +
                   (isSub ? 'ps-6 text-xs ' : 'ps-3 text-xs ') +
                   (isActive
-                    ? 'text-blue-700 font-semibold border-l-2 border-blue-700 bg-blue-50/50 pl-2.5 py-1'
-                    : 'text-slate-600 hover:text-slate-900 font-medium text-xs hover:bg-slate-50')
+                    ? 'text-primary font-semibold border-l-2 border-primary bg-primary/5 pl-2.5 py-1'
+                    : 'text-muted-foreground hover:text-foreground font-medium text-xs hover:bg-muted/40')
                 }
               >
                 {entry.label}

@@ -329,7 +329,7 @@ export const KIT_TOKENS = [
   {
     "name": "--secondary-foreground",
     "cssName": "--secondary-foreground",
-    "value": "#414651",
+    "value": "#1e293b",
     "family": "Core semantic"
   },
   {

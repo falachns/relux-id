@@ -47,7 +47,7 @@ export function Sidebar({
                 }))
               }
               aria-expanded={!isCollapsed}
-              className="mb-1 flex w-full items-center justify-between px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded-md"
+              className="mb-1 flex w-full items-center justify-between px-3 py-1 text-xs font-bold uppercase tracking-wider text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded-md"
             >
               <span>{label(group)}</span>
               <svg
@@ -82,12 +82,12 @@ export function Sidebar({
                         onClick={() => item.section && onNavigate(item.section)}
                         aria-current={isActive ? 'page' : undefined}
                         className={
-                          'group relative flex w-full items-center justify-between rounded-lg pe-2.5 ps-3 text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ' +
+                          'group relative flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
                           (isActive
-                            ? 'bg-blue-50 text-blue-700 font-semibold border-l-3 border-blue-700 rounded-l-none py-2 text-sm'
+                            ? 'bg-secondary text-foreground font-semibold relative before:absolute before:left-0 before:top-2 before:bottom-2 before:w-1 before:bg-primary before:rounded-full'
                             : clickable
-                              ? 'cursor-pointer text-slate-700 hover:text-slate-900 hover:bg-slate-100 font-medium text-sm py-1.5'
-                              : 'cursor-not-allowed text-slate-400 py-1.5 text-sm')
+                              ? 'cursor-pointer text-muted-foreground hover:text-foreground hover:bg-muted/50 font-medium'
+                              : 'cursor-not-allowed text-muted-foreground/50')
                         }
                       >
                         {isActive && (
@@ -98,7 +98,7 @@ export function Sidebar({
                         )}
                         <span className="truncate">{label(item)}</span>
                         {item.soon && (
-                          <span className="rounded-md border border-slate-300 bg-slate-100 px-1.5 py-0.5 font-mono text-xs leading-none uppercase tracking-wider text-slate-700 font-semibold">
+                          <span className="rounded-md border border-border bg-secondary px-1.5 py-0.5 font-mono text-xs leading-none uppercase tracking-wider text-muted-foreground font-semibold">
                             {t.soon}
                           </span>
                         )}

@@ -327,22 +327,22 @@ export function LogoPage({
 
       {/* 2. Clear Space Section */}
       <Section id="clear-space" title={t.clearSpaceTitle}>
-        <p className="mb-6 text-sm text-slate-600 leading-relaxed">{t.clearSpaceDesc}</p>
-        <div className="overflow-hidden rounded-xl border border-slate-200 bg-white p-8 sm:p-12">
+        <p className="mb-6 text-sm text-muted-foreground leading-relaxed">{t.clearSpaceDesc}</p>
+        <div className="overflow-hidden rounded-xl border border-border bg-card p-8 sm:p-12">
           <div className="relative mx-auto flex max-w-md items-center justify-center">
             {/* Dashed 1R clear space boundary box */}
-            <div className="relative rounded-lg border-2 border-dashed border-blue-400 bg-blue-50/30 p-8 sm:p-10">
+            <div className="relative rounded-lg border-2 border-dashed border-primary/40 bg-primary/5 p-8 sm:p-10">
               {/* Dimension indicators */}
-              <span className="absolute -top-6 left-1/2 -translate-x-1/2 font-mono text-xs font-bold text-blue-600">
+              <span className="absolute -top-6 left-1/2 -translate-x-1/2 font-mono text-xs font-bold text-primary">
                 1R
               </span>
-              <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 font-mono text-xs font-bold text-blue-600">
+              <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 font-mono text-xs font-bold text-primary">
                 1R
               </span>
-              <span className="absolute -left-7 top-1/2 -translate-y-1/2 font-mono text-xs font-bold text-blue-600">
+              <span className="absolute -left-7 top-1/2 -translate-y-1/2 font-mono text-xs font-bold text-primary">
                 1R
               </span>
-              <span className="absolute -right-7 top-1/2 -translate-y-1/2 font-mono text-xs font-bold text-blue-600">
+              <span className="absolute -right-7 top-1/2 -translate-y-1/2 font-mono text-xs font-bold text-primary">
                 1R
               </span>
 
@@ -358,17 +358,17 @@ export function LogoPage({
             </div>
           </div>
 
-          <div className="mt-8 grid gap-3 border-t border-slate-100 pt-6 text-xs text-slate-600 sm:grid-cols-3">
+          <div className="mt-8 grid gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:grid-cols-3">
             <div className="flex items-start gap-2">
-              <span className="mt-0.5 size-1.5 rounded-full bg-blue-600 shrink-0" />
+              <span className="mt-0.5 size-1.5 rounded-full bg-primary shrink-0" />
               <span>{t.clearSpaceRule1}</span>
             </div>
             <div className="flex items-start gap-2">
-              <span className="mt-0.5 size-1.5 rounded-full bg-blue-600 shrink-0" />
+              <span className="mt-0.5 size-1.5 rounded-full bg-primary shrink-0" />
               <span>{t.clearSpaceRule2}</span>
             </div>
             <div className="flex items-start gap-2">
-              <span className="mt-0.5 size-1.5 rounded-full bg-blue-600 shrink-0" />
+              <span className="mt-0.5 size-1.5 rounded-full bg-primary shrink-0" />
               <span>{t.clearSpaceRule3}</span>
             </div>
           </div>
@@ -377,7 +377,7 @@ export function LogoPage({
 
       {/* 3. Minimum Sizes Section */}
       <Section id="min-sizes" title={t.minSizesTitle}>
-        <p className="mb-4 text-sm text-slate-600">{t.minSizesDesc}</p>
+        <p className="mb-4 text-sm text-muted-foreground">{t.minSizesDesc}</p>
         <PropsTable
           columns={[
             { key: 'media', header: t.minSizesColumns.media },
@@ -390,21 +390,21 @@ export function LogoPage({
 
       {/* 4. Contrast Rules Section */}
       <Section id="contrast-rules" title={t.contrastTitle}>
-        <p className="mb-4 text-sm text-slate-600 leading-relaxed">{t.contrastDesc}</p>
+        <p className="mb-4 text-sm text-muted-foreground leading-relaxed">{t.contrastDesc}</p>
         <div className="grid gap-3 sm:grid-cols-3">
           {t.contrastItems.map((item) => (
             <div
               key={item.surface}
-              className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-4 shadow-2xs"
+              className="flex flex-col justify-between rounded-xl border border-border bg-card p-4 shadow-2xs"
             >
               <div>
-                <span className="inline-block rounded-md bg-blue-50 px-2 py-0.5 font-mono text-xs font-bold text-blue-700">
+                <span className="inline-block rounded-md bg-secondary px-2 py-0.5 font-mono text-xs font-bold text-primary">
                   {item.ratio}
                 </span>
-                <h4 className="mt-2.5 text-sm font-bold text-slate-900">{item.surface}</h4>
-                <p className="mt-1 font-mono text-xs text-slate-500">{item.variant}</p>
+                <h4 className="mt-2.5 text-sm font-bold text-foreground">{item.surface}</h4>
+                <p className="mt-1 font-mono text-xs text-muted-foreground">{item.variant}</p>
               </div>
-              <p className="mt-3 border-t border-slate-100 pt-2.5 text-xs text-slate-600 leading-normal">
+              <p className="mt-3 border-t border-border/60 pt-2.5 text-xs text-muted-foreground leading-normal">
                 {item.rule}
               </p>
             </div>
@@ -412,7 +412,7 @@ export function LogoPage({
         </div>
       </Section>
 
-      {/* 5. Usage Guidelines (Do & Don't) */}
+      {/* 5. Usage Guidelines (Do & Don’t) */}
       <Section id="guidelines" title={t.guidelinesTitle}>
         <div className="grid gap-4 sm:grid-cols-2">
           <GuidelineCard tone="do" title={t.dosTitle} items={t.dos} />
@@ -449,33 +449,33 @@ function AssetCard({
   downloadLabel: string
 }) {
   return (
-    <div className="flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xs transition-shadow hover:shadow-xs">
+    <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2xs transition-shadow hover:shadow-xs">
       {/* Preview Surface */}
       <div className={`grid h-36 place-items-center p-6 ${previewBg}`}>
         {children}
       </div>
 
       {/* Metadata & Actions */}
-      <div className="flex flex-1 flex-col justify-between border-t border-slate-200 p-4">
+      <div className="flex flex-1 flex-col justify-between border-t border-border p-4">
         <div>
-          <h3 className="text-sm font-bold text-slate-900">{title}</h3>
-          <p className="mt-1 text-xs text-slate-500 leading-normal">{description}</p>
+          <h3 className="text-sm font-bold text-foreground">{title}</h3>
+          <p className="mt-1 text-xs text-muted-foreground leading-normal">{description}</p>
         </div>
 
-        <div className="mt-4 flex items-center gap-2 pt-2 border-t border-slate-100">
+        <div className="mt-4 flex items-center gap-2 pt-2 border-t border-border/60">
           <button
             type="button"
             onClick={onCopy}
-            className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-2xs hover:bg-slate-50 hover:border-slate-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+            className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-border bg-secondary px-3 py-1.5 text-xs font-semibold text-secondary-foreground shadow-2xs hover:bg-muted hover:border-border/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             {copied ? (
               <>
-                <Check className="size-3.5 text-green-600" aria-hidden="true" />
-                <span className="text-green-700 font-bold">{copiedLabel}</span>
+                <Check className="size-3.5 text-success" aria-hidden="true" />
+                <span className="text-success font-bold">{copiedLabel}</span>
               </>
             ) : (
               <>
-                <Copy className="size-3.5 text-slate-500" aria-hidden="true" />
+                <Copy className="size-3.5 text-muted-foreground" aria-hidden="true" />
                 <span>{copyLabel}</span>
               </>
             )}
@@ -484,9 +484,9 @@ function AssetCard({
           <button
             type="button"
             onClick={onDownload}
-            className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-2xs hover:bg-slate-50 hover:border-slate-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+            className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-border bg-secondary px-3 py-1.5 text-xs font-semibold text-secondary-foreground shadow-2xs hover:bg-muted hover:border-border/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            <Download className="size-3.5 text-slate-500" aria-hidden="true" />
+            <Download className="size-3.5 text-muted-foreground" aria-hidden="true" />
             <span>{downloadLabel}</span>
           </button>
         </div>

@@ -93,11 +93,11 @@ export function PageHeader({
               href={figmaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relux-focus inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-2xs hover:bg-slate-50 hover:border-slate-300 transition-colors"
+              className="relux-focus inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground shadow-2xs hover:bg-muted hover:border-border/80 transition-colors"
             >
               <Figma className="size-3.5 text-primary" aria-hidden="true" />
               <span>Figma Spec</span>
-              <ExternalLink className="size-3 text-slate-400" aria-hidden="true" />
+              <ExternalLink className="size-3 text-muted-foreground" aria-hidden="true" />
             </a>
           )}
 
@@ -106,11 +106,11 @@ export function PageHeader({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relux-focus inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-2xs hover:bg-slate-50 hover:border-slate-300 transition-colors"
+              className="relux-focus inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground shadow-2xs hover:bg-muted hover:border-border/80 transition-colors"
             >
-              <Github className="size-3.5 text-slate-700" aria-hidden="true" />
+              <Github className="size-3.5 text-foreground" aria-hidden="true" />
               <span>Repository</span>
-              <ExternalLink className="size-3 text-slate-400" aria-hidden="true" />
+              <ExternalLink className="size-3 text-muted-foreground" aria-hidden="true" />
             </a>
           )}
         </div>

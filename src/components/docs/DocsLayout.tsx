@@ -97,7 +97,7 @@ export function DocsLayout({
         {/* Desktop sidebar */}
         <aside
           aria-label={t.navAside}
-          className="sticky top-16 hidden h-[calc(100vh-4rem)] overflow-y-auto overscroll-contain border-r border-slate-200 pl-4 pr-3 pb-16 lg:block"
+          className="sticky top-16 hidden h-[calc(100vh-4rem)] overflow-y-auto overscroll-contain border-r border-border pl-4 pr-3 pb-16 lg:block"
         >
           <Sidebar active={active} onNavigate={navigate} query={query} />
         </aside>
@@ -135,7 +135,7 @@ export function DocsLayout({
         <main
           id="main-content"
           aria-label={t.main}
-          className="flex min-w-0 flex-col justify-between"
+          className="flex min-w-0 flex-1 flex-col justify-between transition-opacity duration-200 ease-out animate-in fade-in-50"
           tabIndex={-1}
         >
           <div className="px-4 py-10 lg:px-10">
