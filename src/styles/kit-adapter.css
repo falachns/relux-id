@@ -8,6 +8,9 @@
   --popover: var(--colors\/background\/bg-primary);
   --sidebar: var(--colors\/background\/bg-primary);
   --destructive: var(--colors\/background\/bg-error-solid);
+  /* WCAG AA (>= 4.5:1, >= 5.0:1 on white #ffffff and bg-success-soft #ecfdf3) calibrated success tokens */
+  --success-foreground: #14532d;
+  --success-text: #14532d;
 }
 
 @theme inline {
@@ -32,7 +35,9 @@
   --color-input-background: var(--input-background);
   --color-ring: var(--ring);
 
-  --color-success: var(--colors\/foreground\/fg-success-primary);
+  --color-success: var(--success-foreground);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-text: var(--success-text);
   --color-success-soft: var(--colors\/background\/bg-success-primary);
   --color-warning: var(--colors\/foreground\/fg-warning-primary);
   --color-warning-soft: var(--colors\/background\/bg-warning-primary);

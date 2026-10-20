@@ -31,6 +31,8 @@ const localVariables = new Set([
   '--default-transition-duration',
   '--progress-value',
   '--swatch-value',
+  '--success-foreground',
+  '--success-text',
 ])
 
 let allSnippetSources = indexFile

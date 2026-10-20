@@ -326,7 +326,7 @@
 
   .relux-tone--success {
     background: var(--colors\/background\/bg-success-primary);
-    color: var(--colors\/foreground\/fg-success-primary);
+    color: var(--success-foreground, var(--colors\/foreground\/fg-success-primary));
   }
 
   .relux-tone--warning {

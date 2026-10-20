@@ -339,7 +339,7 @@ export function Introduction({
                 className={`flex-1 rounded-md py-1.5 text-xs font-semibold transition-all ${
                   activeCoverageTab === 'ready'
                     ? 'bg-card text-foreground shadow-xs'
-                    : 'text-muted-foreground hover:text-foreground'
+                    : 'text-slate-600 dark:text-slate-300 font-medium hover:text-foreground'
                 }`}
               >
                 {t.readyTab}
@@ -350,7 +350,7 @@ export function Introduction({
                 className={`flex-1 rounded-md py-1.5 text-xs font-semibold transition-all ${
                   activeCoverageTab === 'planned'
                     ? 'bg-card text-foreground shadow-xs'
-                    : 'text-muted-foreground hover:text-foreground'
+                    : 'text-slate-600 dark:text-slate-300 font-medium hover:text-foreground'
                 }`}
               >
                 {t.plannedTab}

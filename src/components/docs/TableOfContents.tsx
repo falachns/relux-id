@@ -101,7 +101,7 @@ export function TableOfContents({ activePage }: { activePage: unknown }) {
 
   return (
     <nav aria-label={t.toc} className="w-full">
-      <div className="mb-3 flex items-center gap-2 ps-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+      <div className="mb-3 flex items-center gap-2 ps-3 text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">
         <span>{t.tocTitle}</span>
       </div>
       <ul className="relative space-y-1.5 border-s border-border ps-0">
@@ -129,8 +129,8 @@ export function TableOfContents({ activePage }: { activePage: unknown }) {
                   (isActive
                     ? 'font-medium text-primary bg-primary/5'
                     : isSub
-                      ? 'text-muted-foreground/75 hover:text-foreground hover:bg-muted/40'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-muted/40')
+                      ? 'text-slate-600 dark:text-slate-300 hover:text-primary hover:font-medium hover:bg-muted/40'
+                      : 'text-slate-700 dark:text-slate-200 hover:text-primary hover:font-medium hover:bg-muted/40')
                 }
               >
                 {entry.label}

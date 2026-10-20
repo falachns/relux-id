@@ -86,7 +86,7 @@ export function Sidebar({
                           (isActive
                             ? 'bg-primary/10 font-semibold text-primary'
                             : clickable
-                              ? 'cursor-pointer text-muted-foreground hover:bg-muted/70 hover:text-foreground'
+                              ? 'cursor-pointer text-slate-600 dark:text-slate-300 font-medium hover:bg-muted/70 hover:text-foreground'
                               : 'cursor-not-allowed text-muted-foreground/45')
                         }
                       >
@@ -98,7 +98,7 @@ export function Sidebar({
                         )}
                         <span className="truncate">{label(item)}</span>
                         {item.soon && (
-                          <span className="rounded-full bg-muted px-1.5 py-0.5 font-mono text-xs leading-none uppercase tracking-wider text-muted-foreground/70">
+                          <span className="rounded-full bg-muted px-1.5 py-0.5 font-mono text-xs leading-none uppercase tracking-wider text-slate-600 dark:text-slate-300 font-semibold">
                             {t.soon}
                           </span>
                         )}

@@ -93,7 +93,7 @@ export function PageHeader({
               href={figmaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relux-focus inline-flex h-7 items-center gap-1.5 rounded-md border border-border bg-card px-2.5 font-medium text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors shadow-xs"
+              className="relux-focus inline-flex h-7 items-center gap-1.5 rounded-md border border-border bg-card px-2.5 font-medium text-slate-700 dark:text-slate-200 hover:text-foreground hover:border-primary/40 transition-colors shadow-xs"
             >
               <Figma className="size-3.5 text-primary" aria-hidden="true" />
               <span>Figma Spec</span>
@@ -106,7 +106,7 @@ export function PageHeader({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relux-focus inline-flex h-7 items-center gap-1.5 rounded-md border border-border bg-card px-2.5 font-medium text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors shadow-xs"
+              className="relux-focus inline-flex h-7 items-center gap-1.5 rounded-md border border-border bg-card px-2.5 font-medium text-slate-700 dark:text-slate-200 hover:text-foreground hover:border-primary/40 transition-colors shadow-xs"
             >
               <Github className="size-3.5 text-foreground" aria-hidden="true" />
               <span>Repository</span>

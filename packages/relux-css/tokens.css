@@ -353,6 +353,8 @@
   --colors\/foreground\/fg-secondary-\(700\): #414651;
   --colors\/foreground\/fg-success-primary: #079455;
   --colors\/foreground\/fg-success-secondary: #17b26a;
+  --success-foreground: #14532d;
+  --success-text: #14532d;
   --colors\/foreground\/fg-tertiary_hover: #414651;
   --colors\/foreground\/fg-tertiary-\(600\): #535862;
   --colors\/foreground\/fg-warning-primary: #dc6803;

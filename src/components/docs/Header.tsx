@@ -90,7 +90,7 @@ export function Header({
             aria-label={t.search}
             className="w-full rounded-lg border border-border bg-input-background py-2 ps-9 pe-12 text-base text-foreground placeholder:text-muted-foreground transition-[border-color,box-shadow] hover:border-muted-foreground focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30 sm:text-sm cursor-pointer"
           />
-          <kbd className="pointer-events-none absolute end-2.5 top-1/2 -translate-y-1/2 rounded bg-muted px-1.5 py-0.5 text-xs leading-none font-mono font-medium text-muted-foreground border border-border">
+          <kbd className="pointer-events-none absolute end-2.5 top-1/2 -translate-y-1/2 rounded border border-border/80 bg-muted px-1.5 py-0.5 font-mono text-xs font-semibold leading-none text-slate-700 dark:text-slate-200 shadow-2xs">
             ⌘K
           </kbd>
         </div>
@@ -120,7 +120,7 @@ export function Header({
                 }
                 className={
                   'rounded-lg px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
-                  (on ? 'bg-card text-primary shadow-sm' : 'text-muted-foreground hover:text-primary')
+                  (on ? 'bg-card text-primary shadow-sm' : 'text-slate-600 dark:text-slate-300 hover:text-primary font-semibold')
                 }
               >
                 {l.short}
