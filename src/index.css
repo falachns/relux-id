@@ -1,0 +1,61 @@
+/* Design System KAI v.1 is the source of truth for tokens and Inter. */
+@import '@make-kits/design-system-kai-v-1/style.css';
+@import 'tailwindcss';
+@import './styles/kit-adapter.css';
+@import './styles/components.css';
+@import './styles/examples.css';
+
+@layer base {
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  [role='tab'],
+  [role='switch'],
+  [role='menuitem'],
+  a[href],
+  summary,
+  select:not(:disabled),
+  label:has(input:not(:disabled)),
+  input[type='checkbox']:not(:disabled),
+  input[type='radio']:not(:disabled),
+  input[type='date']:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :disabled,
+  [aria-disabled='true'] {
+    cursor: not-allowed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--colors\/background\/bg-brand-primary);
+  color: var(--primary);
+}
+
+* {
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+}
+
+*:hover,
+*:focus-within {
+  scrollbar-color: var(--border) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

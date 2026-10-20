@@ -1,0 +1,1 @@
+<x-relux::toggle label="Notifikasi WhatsApp Perjalanan KA" :checked="true" />

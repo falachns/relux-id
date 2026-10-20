@@ -1,0 +1,45 @@
+{
+  "$schema": "https://relux.kai.id/schema/component.json",
+  "name": "Alert",
+  "slug": "alerts",
+  "version": "1.0.0",
+  "status": "stable",
+  "category": "Feedback",
+  "description": "Pesan banner kontekstual untuk pemberitahuan status dan error.",
+  "figma": {
+    "file": "Design System KAI v.1",
+    "node": "124:5250"
+  },
+  "packages": {
+    "blade": "kai/relux-ui",
+    "react": "@kai/relux-react",
+    "angular": "@kai/relux-angular",
+    "css": "@kai/relux-css"
+  },
+  "dependencies": [
+    "@kai/relux-css"
+  ],
+  "props": [
+    {
+      "name": "tone",
+      "type": "info | success | warning | danger",
+      "default": "info"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "default": "-"
+    },
+    {
+      "name": "dismissible",
+      "type": "boolean",
+      "default": "false"
+    }
+  ],
+  "variants": [
+    "info",
+    "success",
+    "warning",
+    "danger"
+  ]
+}

@@ -1,0 +1,45 @@
+# RelUX by KAI — Design System KAI v1
+
+> Dokumentasi bilingual (ID/EN) untuk Make Kit `@make-kits/design-system-kai-v-1@0.0.2`.
+> Bilingual ID/EN documentation for Make Kit `@make-kits/design-system-kai-v-1@0.0.2`.
+
+## Foundations / Fondasi
+
+- Logo
+- Colors / Warna — generated canonical token catalog
+- Typography / Tipografi — 54 Make Kit classes
+- Spacing & Grid
+- Radius, Effects & Shadow
+- Iconography / Ikonografi
+- Component States / State komponen
+
+## Components / Komponen
+
+- Button
+- Form Controls
+- Badges & Tags
+- Alert & Banner
+- Cards
+- Data Table
+- Navigation
+- Modal & Dialog
+- Avatars
+- Progress
+- App UI Components
+
+## RelUX extensions
+
+- Accordion
+- Interactive state reference
+
+## Examples / Contoh
+
+- KAI Operations Dashboard / Dashboard Operasi KAI
+- KAI Landing Page
+- Google Authenticator Guide for ESA Web and ESA Mobile
+
+## Code
+
+Every component group includes React and executable HTML + CSS examples. Interactive
+HTML examples also include JavaScript. All authored styling resolves to CSS variables
+from the Make Kit; Inter is the only UI font.

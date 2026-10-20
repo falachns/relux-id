@@ -1,0 +1,45 @@
+{
+  "$schema": "https://relux.kai.id/schema/component.json",
+  "name": "Select (Dropdown)",
+  "slug": "select",
+  "version": "1.0.0",
+  "status": "stable",
+  "category": "Form Controls",
+  "description": "Dropdown pilihan opsi dari daftar panjang.",
+  "figma": {
+    "file": "Design System KAI v.1",
+    "node": "124:4950"
+  },
+  "packages": {
+    "blade": "kai/relux-ui",
+    "react": "@kai/relux-react",
+    "angular": "@kai/relux-angular",
+    "css": "@kai/relux-css"
+  },
+  "dependencies": [
+    "@kai/relux-css"
+  ],
+  "props": [
+    {
+      "name": "value",
+      "type": "string",
+      "default": "-"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "name": "isInvalid",
+      "type": "boolean",
+      "default": "false"
+    }
+  ],
+  "variants": [
+    "default",
+    "focus",
+    "error",
+    "disabled"
+  ]
+}

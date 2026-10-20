@@ -1,0 +1,1 @@
+<x-relux::avatar name="Budi Santoso" size="md" status="online" />

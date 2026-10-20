@@ -1,0 +1,50 @@
+{
+  "$schema": "https://relux.kai.id/schema/component.json",
+  "name": "Avatar",
+  "slug": "avatars",
+  "version": "1.0.0",
+  "status": "stable",
+  "category": "Media",
+  "description": "Representasi visual profil pengguna dengan foto atau inisial.",
+  "figma": {
+    "file": "Design System KAI v.1",
+    "node": "124:5100"
+  },
+  "packages": {
+    "blade": "kai/relux-ui",
+    "react": "@kai/relux-react",
+    "angular": "@kai/relux-angular",
+    "css": "@kai/relux-css"
+  },
+  "dependencies": [
+    "@kai/relux-css"
+  ],
+  "props": [
+    {
+      "name": "size",
+      "type": "xs | sm | md | lg | xl | 2xl",
+      "default": "md"
+    },
+    {
+      "name": "src",
+      "type": "string",
+      "default": "-"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "default": "-"
+    },
+    {
+      "name": "status",
+      "type": "online | offline",
+      "default": "-"
+    }
+  ],
+  "variants": [
+    "image",
+    "initials",
+    "status-badge",
+    "group"
+  ]
+}

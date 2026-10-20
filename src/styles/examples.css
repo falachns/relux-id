@@ -1,0 +1,16 @@
+@layer components {
+  .relux-example-shell {
+    background: var(--colors\/background\/bg-secondary);
+    border: 1px solid var(--colors\/border\/border-secondary);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .relux-stat-card {
+    background: var(--colors\/background\/bg-primary);
+    border: 1px solid var(--colors\/border\/border-primary);
+    border-radius: var(--radius);
+    box-shadow: var(--elevation-sm);
+    padding: calc(var(--spacing-3xl) * 1px);
+  }
+}

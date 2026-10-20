@@ -1,0 +1,44 @@
+{
+  "$schema": "https://relux.kai.id/schema/component.json",
+  "name": "Empty State",
+  "slug": "empty-states",
+  "version": "1.0.0",
+  "status": "stable",
+  "category": "Application UI",
+  "description": "Tampilan informatif saat data kosong, pencarian nirhasil, atau kendala jaringan.",
+  "figma": {
+    "file": "Design System KAI v.1",
+    "node": "124:5380"
+  },
+  "packages": {
+    "blade": "kai/relux-ui",
+    "react": "@kai/relux-react",
+    "angular": "@kai/relux-angular",
+    "css": "@kai/relux-css"
+  },
+  "dependencies": [
+    "@kai/relux-css"
+  ],
+  "props": [
+    {
+      "name": "variant",
+      "type": "empty | search | error",
+      "default": "empty"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "default": "-"
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "default": "-"
+    }
+  ],
+  "variants": [
+    "empty",
+    "search",
+    "error"
+  ]
+}

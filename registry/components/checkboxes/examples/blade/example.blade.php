@@ -1,0 +1,1 @@
+<x-relux::checkbox label="Saya menyetujui Syarat & Ketentuan Angkutan Penumpang" />

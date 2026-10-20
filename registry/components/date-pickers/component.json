@@ -1,0 +1,39 @@
+{
+  "$schema": "https://relux.kai.id/schema/component.json",
+  "name": "Date Picker",
+  "slug": "date-pickers",
+  "version": "1.0.0",
+  "status": "stable",
+  "category": "Application UI",
+  "description": "Komponen pemilihan tanggal tunggal dan rentang tanggal perjalanan kereta api.",
+  "figma": {
+    "file": "Design System KAI v.1",
+    "node": "124:5460"
+  },
+  "packages": {
+    "blade": "kai/relux-ui",
+    "react": "@kai/relux-react",
+    "angular": "@kai/relux-angular",
+    "css": "@kai/relux-css"
+  },
+  "dependencies": [
+    "@kai/relux-css"
+  ],
+  "props": [
+    {
+      "name": "mode",
+      "type": "single | range",
+      "default": "single"
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "default": "Pilih tanggal..."
+    }
+  ],
+  "variants": [
+    "single",
+    "range",
+    "today-highlight"
+  ]
+}

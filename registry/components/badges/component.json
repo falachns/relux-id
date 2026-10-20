@@ -1,0 +1,50 @@
+{
+  "$schema": "https://relux.kai.id/schema/component.json",
+  "name": "Badge",
+  "slug": "badges",
+  "version": "1.0.0",
+  "status": "stable",
+  "category": "Indicators",
+  "description": "Label ringkas untuk status perjalanan, kelas kereta, dan status sistem.",
+  "figma": {
+    "file": "Design System KAI v.1",
+    "node": "124:4711"
+  },
+  "packages": {
+    "blade": "kai/relux-ui",
+    "react": "@kai/relux-react",
+    "angular": "@kai/relux-angular",
+    "css": "@kai/relux-css"
+  },
+  "dependencies": [
+    "@kai/relux-css"
+  ],
+  "props": [
+    {
+      "name": "tone",
+      "type": "primary | success | warning | danger | info | neutral",
+      "default": "primary"
+    },
+    {
+      "name": "variant",
+      "type": "filled | outline",
+      "default": "filled"
+    },
+    {
+      "name": "size",
+      "type": "sm | md",
+      "default": "md"
+    },
+    {
+      "name": "dot",
+      "type": "boolean",
+      "default": "false"
+    }
+  ],
+  "variants": [
+    "filled",
+    "outline",
+    "with-dot",
+    "number-pill"
+  ]
+}

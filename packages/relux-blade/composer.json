@@ -1,0 +1,29 @@
+{
+  "name": "kai/relux-ui",
+  "description": "Official Blade & Livewire components for RelUX by KAI Design System",
+  "type": "library",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "PT Kereta Api Indonesia (Persero)",
+      "email": "it-dev@kai.id"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^11.0|^12.0",
+    "illuminate/view": "^11.0|^12.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kai\\ReluxUi\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Kai\\ReluxUi\\ReluxUiServiceProvider"
+      ]
+    }
+  }
+}

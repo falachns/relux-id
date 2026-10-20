@@ -1,0 +1,1 @@
+<x-relux::stepper :steps="[['title' => 'Rute', 'status' => 'completed'], ['title' => 'Kursi', 'status' => 'current'], ['title' => 'Bayar', 'status' => 'pending']]" />

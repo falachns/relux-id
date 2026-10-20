@@ -1,0 +1,57 @@
+{
+  "$schema": "https://relux.kai.id/schema/component.json",
+  "name": "Button",
+  "slug": "buttons",
+  "version": "1.0.0",
+  "status": "stable",
+  "category": "Actions",
+  "description": "Tombol memicu aksi utama, sekunder, atau destruktif dalam alur aplikasi.",
+  "figma": {
+    "file": "Design System KAI v.1",
+    "node": "124:4501"
+  },
+  "packages": {
+    "blade": "kai/relux-ui",
+    "react": "@kai/relux-react",
+    "angular": "@kai/relux-angular",
+    "css": "@kai/relux-css"
+  },
+  "dependencies": [
+    "@kai/relux-css"
+  ],
+  "props": [
+    {
+      "name": "variant",
+      "type": "primary | secondary | outline | ghost | destructive",
+      "default": "primary"
+    },
+    {
+      "name": "size",
+      "type": "sm | md | lg",
+      "default": "md"
+    },
+    {
+      "name": "loading",
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "default": "false"
+    }
+  ],
+  "variants": [
+    "primary",
+    "secondary",
+    "outline",
+    "ghost",
+    "destructive",
+    "brand-kai",
+    "brand-commuter",
+    "brand-bandara",
+    "brand-logistik",
+    "brand-wisata",
+    "brand-services"
+  ]
+}

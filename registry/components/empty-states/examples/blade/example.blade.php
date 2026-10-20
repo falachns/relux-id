@@ -1,0 +1,1 @@
+<x-relux::empty-state title="Jadwal Tidak Ditemukan" description="Silakan sesuaikan tanggal atau stasiun pilihan Anda." />

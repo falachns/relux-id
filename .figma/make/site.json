@@ -1,0 +1,11 @@
+{
+  "title": "RelUX - Design System App",
+  "description": "Product requirements document for the PT KAI design system internal web application.",
+  "robots": {
+    "index": true
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

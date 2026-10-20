@@ -1,0 +1,11 @@
+{
+  "name": "@make-kits/design-system-kai-v-1",
+  "version": "0.0.2",
+  "main": "dist/style.css",
+  "style": "dist/style.css",
+  "exports": {
+    ".": "./dist/style.css",
+    "./style.css": "./dist/style.css",
+    "./dist/style.css": "./dist/style.css"
+  }
+}

@@ -1,0 +1,1 @@
+<x-relux::input type="text" placeholder="Masukkan Nomor Induk Kependudukan (NIK)" />

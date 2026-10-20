@@ -1,0 +1,38 @@
+{
+  "$schema": "https://relux.kai.id/schema/component.json",
+  "name": "Tag",
+  "slug": "tags",
+  "version": "1.0.0",
+  "status": "stable",
+  "category": "Indicators",
+  "description": "Elemen kategori atau metadata yang dapat difilter atau dihapus.",
+  "figma": {
+    "file": "Design System KAI v.1",
+    "node": "124:5180"
+  },
+  "packages": {
+    "blade": "kai/relux-ui",
+    "react": "@kai/relux-react",
+    "angular": "@kai/relux-angular",
+    "css": "@kai/relux-css"
+  },
+  "dependencies": [
+    "@kai/relux-css"
+  ],
+  "props": [
+    {
+      "name": "removable",
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "name": "tone",
+      "type": "neutral | brand",
+      "default": "neutral"
+    }
+  ],
+  "variants": [
+    "default",
+    "removable"
+  ]
+}

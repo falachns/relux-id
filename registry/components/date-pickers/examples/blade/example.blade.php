@@ -1,0 +1,1 @@
+<x-relux::date-picker name="jadwal" placeholder="Pilih tanggal keberangkatan" />

@@ -1,0 +1,604 @@
+# RelUX Design System by KAI — Complete LLM Context (Full Specification)
+> Single Source of Truth untuk KAI Digital Ecosystem (Laravel Livewire Blade, React, Angular, & CSS Canonical).
+> Generated automatically by `scripts/generate-llms-full.mjs` (PRD §5.10).
+> Synchronized with Make Kit `@make-kits/design-system-kai-v-1@0.0.2` & Untitled UI foundations.
+
+- Total Canonical Tokens: 597 CSS variables
+- Component Parity: 100% across 3 Frameworks (14 Core Components)
+- Primary UI Font: Inter (Display, Headings, Body, Labels)
+- Monospace Font: Roboto Mono (Code, Data Tables, Booking Codes)
+
+
+---
+## 1. Global System Summary (llms.txt)
+
+# RelUX by KAI — Design System KAI v1
+
+> Dokumentasi bilingual (ID/EN) untuk Make Kit `@make-kits/design-system-kai-v-1@0.0.2`.
+> Bilingual ID/EN documentation for Make Kit `@make-kits/design-system-kai-v-1@0.0.2`.
+
+## Foundations / Fondasi
+
+- Logo
+- Colors / Warna — generated canonical token catalog
+- Typography / Tipografi — 54 Make Kit classes
+- Spacing & Grid
+- Radius, Effects & Shadow
+- Iconography / Ikonografi
+- Component States / State komponen
+
+## Components / Komponen
+
+- Button
+- Form Controls
+- Badges & Tags
+- Alert & Banner
+- Cards
+- Data Table
+- Navigation
+- Modal & Dialog
+- Avatars
+- Progress
+- App UI Components
+
+## RelUX extensions
+
+- Accordion
+- Interactive state reference
+
+## Examples / Contoh
+
+- KAI Operations Dashboard / Dashboard Operasi KAI
+- KAI Landing Page
+- Google Authenticator Guide for ESA Web and ESA Mobile
+
+## Code
+
+Every component group includes React and executable HTML + CSS examples. Interactive
+HTML examples also include JavaScript. All authored styling resolves to CSS variables
+from the Make Kit; Inter is the only UI font.
+
+
+---
+## 2. Monorepo Distribution & Package Architecture (PRD §7.2)
+
+RelUX didistribusikan melalui 4 paket terstandarisasi untuk memastikan 100% konsistensi visual di seluruh lini aplikasi KAI:
+
+### A. @kai/relux-css (Canonical CSS & Design Tokens)
+- Paket dasar yang memuat variabel CSS kanonikal `tokens.css`, kamus token `tokens.json` (format W3C Design Tokens), dan kelas komponen standar `components.css` (seluruh kelas menggunakan prefiks `.relux-*`).
+- Mendukung mode gelap/terang (`.dark`), kontras WCAG 2.1 AA/AAA, dan reset box-sizing border-box.
+
+### B. @kai/relux-react (React 19 Components)
+- Komponen React siap pakai berbasis Radix UI Primitives, Lucide Icons, dan Tailwind v4 / CSS Canonical.
+- Tipe data TypeScript lengkap, dukungan Server Components (Next.js App Router) & SSR.
+- Komponen: `Button`, `Accordion`, `Badge`, `Alert`, `Card`, `Dialog/Modal`, `Input`, `Textarea`, `Select`, `Checkbox`, `Radio`, `Switch`, `Avatar`, `Progress`, `Table`, `Navigation`, `Stepper`, `EmptyState`, `FileUpload`, `DatePicker`.
+
+### C. @kai/relux-angular (Angular 19 Standalone Components)
+- Komponen Angular berbasis standalone components & signals (`relux-*`).
+- Styling terhubung 1:1 ke `@kai/relux-css`.
+
+### D. kai/relux-ui (Laravel Livewire Blade Components via Composer)
+- Paket Composer resmi untuk aplikasi Laravel / Livewire: `<x-relux::component>`.
+- Di-scaffold ke dalam project via Artisan CLI:
+  ```bash
+  php artisan relux:init
+  php artisan relux:add {component} [--path] [--overwrite]
+  php artisan relux:list
+  ```
+
+
+---
+## 3. Design Tokens Specification (Make Kit KAI v1)
+
+RelUX menyediakan 597 token CSS kanonikal yang dipetakan secara deterministik:
+- **$SCHEMA**: 55 tokens
+- **NAME**: 26 tokens
+- **VERSION**: 5 tokens
+- **DESCRIPTION**: 83 tokens
+- **TOKENCOUNT**: 0 tokens
+- **TOKENS**: 29 tokens
+
+### Palet Warna Kunci KAI:
+- **KAI Navy (Corporate Primary):**
+  - `--colors/kai/navy/default`: #002A54 (Brand utama KAI, rasio kontras 12.8:1 pada latar putih - WCAG AAA)
+  - `--colors/kai/navy/hover`: #001D3B
+  - `--colors/kai/navy/pressed`: #001224
+  - `--colors/kai/navy/subtle`: #E6EAF0
+- **KAI Orange (Accent / Call-to-Action):**
+  - `--colors/kai/orange/default`: #ED6B23 (Aksen primer tiket & konfirmasi)
+  - `--colors/kai/orange/hover`: #D55712
+  - `--colors/kai/orange/subtle`: #FDF3ED
+- **Semantic Feedback States:**
+  - Success: `--colors/kai/green/*` (#10B981)
+  - Warning: `--colors/kai/yellow/*` (#F59E0B)
+  - Danger / Destructive: `--colors/kai/red/*` (#EF4444)
+  - Neutral / Slate: `--colors/kai/slate/*` (#64748B)
+
+### Tipografi Skala Make Kit:
+- **Display**: `display-2xl`, `display-xl`, `display-lg`, `display-md`, `display-sm`, `display-xs`
+- **Heading**: `heading-xl`, `heading-lg`, `heading-md`, `heading-sm`, `heading-xs`
+- **Body**: `body-xl`, `body-lg`, `body-md`, `body-sm`, `body-xs`
+- **Label**: `label-xl`, `label-lg`, `label-md`, `label-sm`, `label-xs`
+- Seluruh skala tipografi memiliki 3 bobot kanonikal: Regular (400), Medium (500), SemiBold (600), Bold (700).
+
+
+---
+## 4. Multi-Framework Parity Registry (14 Components)
+
+
+### Komponen: Alert (`alerts`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** info, success, warning, danger
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (info | success | warning | danger):  [Default: info]
+  - `1` (string):  [Default: -]
+  - `2` (boolean):  [Default: false]
+
+
+### Komponen: Avatar (`avatars`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** image, initials, status-badge, group
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (xs | sm | md | lg | xl | 2xl):  [Default: md]
+  - `1` (string):  [Default: -]
+  - `2` (string):  [Default: -]
+  - `3` (online | offline):  [Default: -]
+
+
+### Komponen: Badge (`badges`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** filled, outline, with-dot, number-pill
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (primary | success | warning | danger | info | neutral):  [Default: primary]
+  - `1` (filled | outline):  [Default: filled]
+  - `2` (sm | md):  [Default: md]
+  - `3` (boolean):  [Default: false]
+
+
+### Komponen: Button (`buttons`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** primary, secondary, outline, ghost, destructive, brand-kai, brand-commuter, brand-bandara, brand-logistik, brand-wisata, brand-services
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (primary | secondary | outline | ghost | destructive):  [Default: primary]
+  - `1` (sm | md | lg):  [Default: md]
+  - `2` (boolean):  [Default: false]
+  - `3` (boolean):  [Default: false]
+
+
+### Komponen: Checkbox (`checkboxes`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** default, checked, indeterminate, disabled
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (boolean):  [Default: false]
+  - `1` (boolean):  [Default: false]
+  - `2` (string):  [Default: -]
+
+
+### Komponen: Date Picker (`date-pickers`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** single, range, today-highlight
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (single | range):  [Default: single]
+  - `1` (string):  [Default: Pilih tanggal...]
+
+
+### Komponen: Empty State (`empty-states`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** empty, search, error
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (empty | search | error):  [Default: empty]
+  - `1` (string):  [Default: -]
+  - `2` (string):  [Default: -]
+
+
+### Komponen: File Upload (`file-uploads`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** dropzone, preview-list, error
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (string):  [Default: .pdf,.png,.jpg]
+  - `1` (number):  [Default: 10]
+  - `2` (boolean):  [Default: true]
+
+
+### Komponen: Input (`inputs`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** default, focus, error, disabled
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (text | email | password | number | date):  [Default: text]
+  - `1` (boolean):  [Default: false]
+  - `2` (boolean):  [Default: false]
+
+
+### Komponen: Select (Dropdown) (`select`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** default, focus, error, disabled
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (string):  [Default: -]
+  - `1` (boolean):  [Default: false]
+  - `2` (boolean):  [Default: false]
+
+
+### Komponen: Stepper (`steppers`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** horizontal, vertical, completed, current, error
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (horizontal | vertical):  [Default: horizontal]
+  - `1` (StepItem[]):  [Default: []]
+
+
+### Komponen: Tag (`tags`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** default, removable
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (boolean):  [Default: false]
+  - `1` (neutral | brand):  [Default: neutral]
+
+
+### Komponen: Toggle (Switch) (`toggles`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** default, checked, disabled
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (boolean):  [Default: false]
+  - `1` (boolean):  [Default: false]
+  - `2` (string):  [Default: -]
+
+
+### Komponen: Tooltip (`tooltips`)
+- **Status:** stable (Version: 1.0.0)
+- **Paket:**
+  - Blade: `kai/relux-ui`
+  - React: `@kai/relux-react`
+  - Angular: `@kai/relux-angular`
+  - CSS: `@kai/relux-css`
+- **Varian:** light, dark
+- **Ukuran:** md
+- **Props Utama:**
+  - `0` (string):  [Default: -]
+  - `1` (top | right | bottom | left):  [Default: top]
+
+
+---
+## 5. Comprehensive Component Guides (public/components/*.md)
+
+
+### File: public/components/accordion.md
+
+# RelUX by KAI — Accordion
+> Komponen lipat/buka konten dengan animasi dan aksesibilitas ARIA.
+
+- **Kategori:** Disclosure
+- **Status:** Stable (Make Kit KAI v1)
+- **Paket Resmi:**
+  - Blade: `kai/relux-ui` (`<x-relux::accordion>`)
+  - React: `@kai/relux-react` (`<Accordion />`)
+  - Angular: `@kai/relux-angular` (`relux-accordion`)
+  - CSS: `@kai/relux-css` (`.relux-accordion`)
+
+## Standar Penggunaan
+- Selalu gunakan token semantik Make Kit KAI (`--colors/kai/...`, `--radius-...`, `--spacing-...`).
+- Hindari inline style dan arbitrary classes.
+- Pertahankan touch target minimal 44x44px pada layar mobile.
+- Pastikan interaksi keyboard (Tab, Enter, Space, Escape, Arrow keys) berfungsi penuh.
+
+
+### File: public/components/alert.md
+
+# RelUX by KAI — Alert & Banner
+> Pesan banner kontekstual untuk pemberitahuan status dan notifikasi error.
+
+- **Kategori:** Feedback
+- **Status:** Stable (Make Kit KAI v1)
+- **Paket Resmi:**
+  - Blade: `kai/relux-ui` (`<x-relux::alert>`)
+  - React: `@kai/relux-react` (`<Alert & Banner />`)
+  - Angular: `@kai/relux-angular` (`relux-alert`)
+  - CSS: `@kai/relux-css` (`.relux-alert`)
+
+## Standar Penggunaan
+- Selalu gunakan token semantik Make Kit KAI (`--colors/kai/...`, `--radius-...`, `--spacing-...`).
+- Hindari inline style dan arbitrary classes.
+- Pertahankan touch target minimal 44x44px pada layar mobile.
+- Pastikan interaksi keyboard (Tab, Enter, Space, Escape, Arrow keys) berfungsi penuh.
+
+
+### File: public/components/app-ui.md
+
+# RelUX by KAI — App UI Components
+> Widget pemesanan tiket KAI dan sidebar navigation cards.
+
+- **Kategori:** Patterns
+- **Status:** Stable (Make Kit KAI v1)
+- **Paket Resmi:**
+  - Blade: `kai/relux-ui` (`<x-relux::app-ui>`)
+  - React: `@kai/relux-react` (`<App UI Components />`)
+  - Angular: `@kai/relux-angular` (`relux-app-ui`)
+  - CSS: `@kai/relux-css` (`.relux-app-ui`)
+
+## Standar Penggunaan
+- Selalu gunakan token semantik Make Kit KAI (`--colors/kai/...`, `--radius-...`, `--spacing-...`).
+- Hindari inline style dan arbitrary classes.
+- Pertahankan touch target minimal 44x44px pada layar mobile.
+- Pastikan interaksi keyboard (Tab, Enter, Space, Escape, Arrow keys) berfungsi penuh.
+
+
+### File: public/components/avatar.md
+
+# RelUX by KAI — Avatars
+> Representasi visual profil pengguna dengan inisial fallback dan status online.
+
+- **Kategori:** Media
+- **Status:** Stable (Make Kit KAI v1)
+- **Paket Resmi:**
+  - Blade: `kai/relux-ui` (`<x-relux::avatar>`)
+  - React: `@kai/relux-react` (`<Avatars />`)
+  - Angular: `@kai/relux-angular` (`relux-avatar`)
+  - CSS: `@kai/relux-css` (`.relux-avatar`)
+
+## Standar Penggunaan
+- Selalu gunakan token semantik Make Kit KAI (`--colors/kai/...`, `--radius-...`, `--spacing-...`).
+- Hindari inline style dan arbitrary classes.
+- Pertahankan touch target minimal 44x44px pada layar mobile.
+- Pastikan interaksi keyboard (Tab, Enter, Space, Escape, Arrow keys) berfungsi penuh.
+
+
+### File: public/components/badge.md
+
+# RelUX by KAI — Badges & Tags
+> Label ringkas untuk status perjalanan, kelas kereta, dan status sistem.
+
+- **Kategori:** Indicators
+- **Status:** Stable (Make Kit KAI v1)
+- **Paket Resmi:**
+  - Blade: `kai/relux-ui` (`<x-relux::badge>`)
+  - React: `@kai/relux-react` (`<Badges & Tags />`)
+  - Angular: `@kai/relux-angular` (`relux-badge`)
+  - CSS: `@kai/relux-css` (`.relux-badge`)
+
+## Standar Penggunaan
+- Selalu gunakan token semantik Make Kit KAI (`--colors/kai/...`, `--radius-...`, `--spacing-...`).
+- Hindari inline style dan arbitrary classes.
+- Pertahankan touch target minimal 44x44px pada layar mobile.
+- Pastikan interaksi keyboard (Tab, Enter, Space, Escape, Arrow keys) berfungsi penuh.
+
+
+### File: public/components/button.md
+
+# RelUX by KAI — Button
+> Tombol pemicu aksi utama, sekunder, dan destruktif pada aplikasi KAI.
+
+- **Kategori:** Actions
+- **Status:** Stable (Make Kit KAI v1)
+- **Paket Resmi:**
+  - Blade: `kai/relux-ui` (`<x-relux::button>`)
+  - React: `@kai/relux-react` (`<Button />`)
+  - Angular: `@kai/relux-angular` (`relux-button`)
+  - CSS: `@kai/relux-css` (`.relux-button`)
+
+## Standar Penggunaan
+- Selalu gunakan token semantik Make Kit KAI (`--colors/kai/...`, `--radius-...`, `--spacing-...`).
+- Hindari inline style dan arbitrary classes.
+- Pertahankan touch target minimal 44x44px pada layar mobile.
+- Pastikan interaksi keyboard (Tab, Enter, Space, Escape, Arrow keys) berfungsi penuh.
+
+
+### File: public/components/card.md
+
+# RelUX by KAI — Cards
+> Kontainer informasi terkelompok untuk jadwal, profil, dan statistik.
+
+- **Kategori:** Surfaces
+- **Status:** Stable (Make Kit KAI v1)
+- **Paket Resmi:**
+  - Blade: `kai/relux-ui` (`<x-relux::card>`)
+  - React: `@kai/relux-react` (`<Cards />`)
+  - Angular: `@kai/relux-angular` (`relux-card`)
+  - CSS: `@kai/relux-css` (`.relux-card`)
+
+## Standar Penggunaan
+- Selalu gunakan token semantik Make Kit KAI (`--colors/kai/...`, `--radius-...`, `--spacing-...`).
+- Hindari inline style dan arbitrary classes.
+- Pertahankan touch target minimal 44x44px pada layar mobile.
+- Pastikan interaksi keyboard (Tab, Enter, Space, Escape, Arrow keys) berfungsi penuh.
+
+
+### File: public/components/form.md
+
+# RelUX by KAI — Form Controls
+> Elemen input form aksesibel: text, password show/hide, select, textarea, checkbox, radio, switch.
+
+- **Kategori:** Form
+- **Status:** Stable (Make Kit KAI v1)
+- **Paket Resmi:**
+  - Blade: `kai/relux-ui` (`<x-relux::form>`)
+  - React: `@kai/relux-react` (`<Form Controls />`)
+  - Angular: `@kai/relux-angular` (`relux-form`)
+  - CSS: `@kai/relux-css` (`.relux-form`)
+
+## Standar Penggunaan
+- Selalu gunakan token semantik Make Kit KAI (`--colors/kai/...`, `--radius-...`, `--spacing-...`).
+- Hindari inline style dan arbitrary classes.
+- Pertahankan touch target minimal 44x44px pada layar mobile.
+- Pastikan interaksi keyboard (Tab, Enter, Space, Escape, Arrow keys) berfungsi penuh.
+
+
+### File: public/components/modal.md
+
+# RelUX by KAI — Modal & Dialog
+> Dialog modal berbasis native HTML5 dialog dengan focus trap dan escape handler.
+
+- **Kategori:** Overlays
+- **Status:** Stable (Make Kit KAI v1)
+- **Paket Resmi:**
+  - Blade: `kai/relux-ui` (`<x-relux::modal>`)
+  - React: `@kai/relux-react` (`<Modal & Dialog />`)
+  - Angular: `@kai/relux-angular` (`relux-modal`)
+  - CSS: `@kai/relux-css` (`.relux-modal`)
+
+## Standar Penggunaan
+- Selalu gunakan token semantik Make Kit KAI (`--colors/kai/...`, `--radius-...`, `--spacing-...`).
+- Hindari inline style dan arbitrary classes.
+- Pertahankan touch target minimal 44x44px pada layar mobile.
+- Pastikan interaksi keyboard (Tab, Enter, Space, Escape, Arrow keys) berfungsi penuh.
+
+
+### File: public/components/navigation.md
+
+# RelUX by KAI — Navigation
+> Pola navigasi antar halaman dan panel: breadcrumbs, tabs, dan pagination.
+
+- **Kategori:** Navigation
+- **Status:** Stable (Make Kit KAI v1)
+- **Paket Resmi:**
+  - Blade: `kai/relux-ui` (`<x-relux::navigation>`)
+  - React: `@kai/relux-react` (`<Navigation />`)
+  - Angular: `@kai/relux-angular` (`relux-navigation`)
+  - CSS: `@kai/relux-css` (`.relux-navigation`)
+
+## Standar Penggunaan
+- Selalu gunakan token semantik Make Kit KAI (`--colors/kai/...`, `--radius-...`, `--spacing-...`).
+- Hindari inline style dan arbitrary classes.
+- Pertahankan touch target minimal 44x44px pada layar mobile.
+- Pastikan interaksi keyboard (Tab, Enter, Space, Escape, Arrow keys) berfungsi penuh.
+
+
+### File: public/components/progress.md
+
+# RelUX by KAI — Progress & Loaders
+> Progress bar linear, spinner berputar, dan skeleton shimmer placeholder.
+
+- **Kategori:** Feedback
+- **Status:** Stable (Make Kit KAI v1)
+- **Paket Resmi:**
+  - Blade: `kai/relux-ui` (`<x-relux::progress>`)
+  - React: `@kai/relux-react` (`<Progress & Loaders />`)
+  - Angular: `@kai/relux-angular` (`relux-progress`)
+  - CSS: `@kai/relux-css` (`.relux-progress`)
+
+## Standar Penggunaan
+- Selalu gunakan token semantik Make Kit KAI (`--colors/kai/...`, `--radius-...`, `--spacing-...`).
+- Hindari inline style dan arbitrary classes.
+- Pertahankan touch target minimal 44x44px pada layar mobile.
+- Pastikan interaksi keyboard (Tab, Enter, Space, Escape, Arrow keys) berfungsi penuh.
+
+
+### File: public/components/table.md
+
+# RelUX by KAI — Data Table
+> Tabel data terstruktur dengan pencarian, sorting, status badges, dan paginasi.
+
+- **Kategori:** Data Display
+- **Status:** Stable (Make Kit KAI v1)
+- **Paket Resmi:**
+  - Blade: `kai/relux-ui` (`<x-relux::table>`)
+  - React: `@kai/relux-react` (`<Data Table />`)
+  - Angular: `@kai/relux-angular` (`relux-table`)
+  - CSS: `@kai/relux-css` (`.relux-table`)
+
+## Standar Penggunaan
+- Selalu gunakan token semantik Make Kit KAI (`--colors/kai/...`, `--radius-...`, `--spacing-...`).
+- Hindari inline style dan arbitrary classes.
+- Pertahankan touch target minimal 44x44px pada layar mobile.
+- Pastikan interaksi keyboard (Tab, Enter, Space, Escape, Arrow keys) berfungsi penuh.
+
+
+---
+## 6. CLI Quick Reference
+
+### PHP Artisan (kai/relux-ui)
+```bash
+# 1. Inisialisasi token & konfigurasi CSS ke Laravel
+php artisan relux:init
+
+# 2. Tambah komponen spesifik ke resources/views/components/relux/
+php artisan relux:add button alert card --overwrite
+
+# 3. Cek daftar seluruh komponen kanonikal
+php artisan relux:list
+```
+
+### npm CLI (@kai/relux)
+```bash
+# Inisialisasi konfigurasi React / Vite
+npx @kai/relux init
+
+# Tambah komponen React ke src/components/ui/
+npx @kai/relux add button stepper date-picker
+```

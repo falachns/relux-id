@@ -1,0 +1,29 @@
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "identifier": "urn:air:relux-kai.figma.site:docs:fondasi-desain",
+      "displayName": "Fondasi Desain — Logo, Warna, Tipografi, Spacing, Radius & Shadow",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://relux-kai.figma.site/llms.txt",
+      "description": "Panduan fondasi visual RelUX: penggunaan logo KAI, palet warna dan token semantik, skala tipografi, sistem spacing, border radius, dan efek bayangan untuk produk digital PT Kereta Api Indonesia.",
+      "representativeQueries": [
+        "Apa token warna utama KAI?",
+        "Bagaimana cara menggunakan logo KAI?",
+        "Apa skala tipografi RelUX?"
+      ]
+    },
+    {
+      "identifier": "urn:air:relux-kai.figma.site:docs:komponen",
+      "displayName": "Komponen — Accordion, Button, State, Icon",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://relux-kai.figma.site/llms.txt",
+      "description": "Dokumentasi komponen interaktif RelUX: Accordion, Button dengan varian dan status, panduan State (hover, fokus, aktif, nonaktif), dan pustaka Icon berbasis Lucide.",
+      "representativeQueries": [
+        "Bagaimana cara menggunakan Button primary KAI?",
+        "Apa saja varian komponen Button RelUX?",
+        "Bagaimana state disabled pada komponen KAI?"
+      ]
+    }
+  ]
+}

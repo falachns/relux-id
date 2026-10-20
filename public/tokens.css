@@ -1,0 +1,978 @@
+/* Make Kit Design System KAI v.1 (reconstructed vendor) */
+:root {
+  --component-colors\/alpha\/alpha-black-10: #0000001a;
+  --component-colors\/alpha\/alpha-black-100: #000;
+  --component-colors\/alpha\/alpha-black-20: #0003;
+  --component-colors\/alpha\/alpha-black-30: #0000004d;
+  --component-colors\/alpha\/alpha-black-40: #0006;
+  --component-colors\/alpha\/alpha-black-50: #00000080;
+  --component-colors\/alpha\/alpha-black-60: #0009;
+  --component-colors\/alpha\/alpha-black-70: #000000b2;
+  --component-colors\/alpha\/alpha-black-80: #000c;
+  --component-colors\/alpha\/alpha-black-90: #000000e5;
+  --component-colors\/alpha\/alpha-white-10: #ffffff1a;
+  --component-colors\/alpha\/alpha-white-100: #fff;
+  --component-colors\/alpha\/alpha-white-20: #fff3;
+  --component-colors\/alpha\/alpha-white-30: #ffffff4d;
+  --component-colors\/alpha\/alpha-white-40: #fff6;
+  --component-colors\/alpha\/alpha-white-50: #ffffff80;
+  --component-colors\/alpha\/alpha-white-60: #fff9;
+  --component-colors\/alpha\/alpha-white-70: #ffffffb2;
+  --component-colors\/alpha\/alpha-white-80: #fffc;
+  --component-colors\/alpha\/alpha-white-90: #ffffffe5;
+  --chart-1: #201e64;
+  --chart-2: #7f7cc0;
+  --chart-3: #5551a3;
+  --chart-4: #a3a1d1;
+  --chart-5: #d9d9eb;
+  --component-colors\/components\/avatars\/avatar-styles-bg-neutral: #e0e0e0;
+  --component-colors\/components\/toggles\/toggle-border: #d5d7da;
+  --component-colors\/components\/toggles\/toggle-slim-border_pressed: var(--colors\/background\/bg-brand-solid);
+  --component-colors\/components\/toggles\/toggle-slim-border_pressed-hover: var(--colors\/background\/bg-brand-solid_hover);
+  --accent: #252271;
+  --accent-foreground: #fff;
+  --background: #fff;
+  --border: #d5d7da;
+  --card: #0000;
+  --card-foreground: #414651;
+  --color-black: #000;
+  --color-gray-50: oklch(98.5% .002 247.839);
+  --color-white: #fff;
+  --destructive: #0000;
+  --destructive-foreground: #fff;
+  --elevation-sm: 0px 1px 2px 0px #0a0d120d;
+  --foreground: #181d27;
+  --input: #fff;
+  --input-background: #fff;
+  --muted: #fafafa;
+  --muted-foreground: #717680;
+  --popover: #0000;
+  --popover-foreground: #414651;
+  --primary: #201e64;
+  --primary-digisign: #052a66;
+  --primary-foreground: #fff;
+  --radius: 8px;
+  --ring: #252271;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #414651;
+  --stroke-card: #0000001a;
+  --colors\/effects\/portfolio-mockups\/shadow-grid-md: #0a0d1214;
+  --colors\/effects\/portfolio-mockups\/shadow-main-centre-lg: #0a0d122e;
+  --colors\/effects\/portfolio-mockups\/shadow-main-centre-md: #0a0d1224;
+  --colors\/effects\/portfolio-mockups\/shadow-overlay-lg: #0a0d121f;
+  --colors\/effects\/shadows\/shadow-2xl_01: #0a0d122e;
+  --colors\/effects\/shadows\/shadow-2xl_02: #0a0d120a;
+  --colors\/effects\/shadows\/shadow-3xl_01: #0a0d1224;
+  --colors\/effects\/shadows\/shadow-3xl_02: #0a0d120a;
+  --colors\/effects\/shadows\/shadow-lg_01: #0a0d1214;
+  --colors\/effects\/shadows\/shadow-lg_02: #0a0d1208;
+  --colors\/effects\/shadows\/shadow-lg_03: #0a0d120a;
+  --colors\/effects\/shadows\/shadow-md_01: #0a0d121a;
+  --colors\/effects\/shadows\/shadow-md_02: #0a0d120f;
+  --colors\/effects\/shadows\/shadow-skeumorphic-inner: #0a0d120d;
+  --colors\/effects\/shadows\/shadow-skeumorphic-inner-border: #0a0d122e;
+  --colors\/effects\/shadows\/shadow-sm_01: #0a0d121a;
+  --colors\/effects\/shadows\/shadow-sm_02: #0a0d121a;
+  --colors\/effects\/shadows\/shadow-xl_01: #0a0d1214;
+  --colors\/effects\/shadows\/shadow-xl_02: #0a0d1208;
+  --colors\/effects\/shadows\/shadow-xl_03: #0a0d120a;
+  --colors\/effects\/shadows\/shadow-xs: #0a0d120d;
+  --colors\/kai\/bandara-primary\/100: #aeddf0;
+  --colors\/kai\/bandara-primary\/200: #84c9e7;
+  --colors\/kai\/bandara-primary\/25: #e6f4fa;
+  --colors\/kai\/bandara-primary\/300: #4fb0dc;
+  --colors\/kai\/bandara-primary\/400: #1c98d1;
+  --colors\/kai\/bandara-primary\/50: #d1ecf6;
+  --colors\/kai\/bandara-primary\/500: #098ccc;
+  --colors\/kai\/bandara-primary\/600: #087eb8;
+  --colors\/kai\/bandara-primary\/700: #076896;
+  --colors\/kai\/bandara-primary\/800: #055274;
+  --colors\/kai\/bandara-primary\/900: #044052;
+  --colors\/kai\/bandara-primary\/950: #043b56;
+  --colors\/kai\/bandara-secondary\/100: #b0dde6;
+  --colors\/kai\/bandara-secondary\/200: #85cad6;
+  --colors\/kai\/bandara-secondary\/25: #eaf6f8;
+  --colors\/kai\/bandara-secondary\/300: #57b4c5;
+  --colors\/kai\/bandara-secondary\/400: #34a6bc;
+  --colors\/kai\/bandara-secondary\/50: #d5edf2;
+  --colors\/kai\/bandara-secondary\/500: #2ba5bb;
+  --colors\/kai\/bandara-secondary\/600: #2796a9;
+  --colors\/kai\/bandara-secondary\/700: #1f7a88;
+  --colors\/kai\/bandara-secondary\/800: #185e67;
+  --colors\/kai\/bandara-secondary\/900: #134a4e;
+  --colors\/kai\/bandara-secondary\/950: #12454f;
+  --colors\/kai\/commuter-primary\/100: #f5a9a5;
+  --colors\/kai\/commuter-primary\/200: #ef7d77;
+  --colors\/kai\/commuter-primary\/25: #fce9e8;
+  --colors\/kai\/commuter-primary\/300: #e95148;
+  --colors\/kai\/commuter-primary\/400: #e02e25;
+  --colors\/kai\/commuter-primary\/50: #fad3d1;
+  --colors\/kai\/commuter-primary\/500: #de251b;
+  --colors\/kai\/commuter-primary\/600: #c92118;
+  --colors\/kai\/commuter-primary\/700: #a81c14;
+  --colors\/kai\/commuter-primary\/800: #861610;
+  --colors\/kai\/commuter-primary\/900: #6a110c;
+  --colors\/kai\/commuter-primary\/950: #5d100b;
+  --colors\/kai\/commuter-secondary\/100: #b0ccc9;
+  --colors\/kai\/commuter-secondary\/200: #86b1ae;
+  --colors\/kai\/commuter-secondary\/25: #eaf1f0;
+  --colors\/kai\/commuter-secondary\/300: #5d9692;
+  --colors\/kai\/commuter-secondary\/400: #3e7f7b;
+  --colors\/kai\/commuter-secondary\/50: #d4e3e1;
+  --colors\/kai\/commuter-secondary\/500: #286f6c;
+  --colors\/kai\/commuter-secondary\/600: #24635f;
+  --colors\/kai\/commuter-secondary\/700: #1d514e;
+  --colors\/kai\/commuter-secondary\/800: #163f3c;
+  --colors\/kai\/commuter-secondary\/900: #122f2d;
+  --colors\/kai\/commuter-secondary\/950: #112f2d;
+  --colors\/kai\/esa-primary\/100: #b4cce6;
+  --colors\/kai\/esa-primary\/200: #8eb3da;
+  --colors\/kai\/esa-primary\/25: #e7eef6;
+  --colors\/kai\/esa-primary\/300: #5f91c8;
+  --colors\/kai\/esa-primary\/400: #326fb5;
+  --colors\/kai\/esa-primary\/50: #d3e0f0;
+  --colors\/kai\/esa-primary\/500: #0b56a7;
+  --colors\/kai\/esa-primary\/600: #0a4d98;
+  --colors\/kai\/esa-primary\/700: #083e7b;
+  --colors\/kai\/esa-primary\/800: #072f5e;
+  --colors\/kai\/esa-primary\/900: #061f49;
+  --colors\/kai\/esa-primary\/950: #052446;
+  --colors\/kai\/esa-secondary\/100: #fccb99;
+  --colors\/kai\/esa-secondary\/200: #fab066;
+  --colors\/kai\/esa-secondary\/25: #fef3e6;
+  --colors\/kai\/esa-secondary\/300: #f89633;
+  --colors\/kai\/esa-secondary\/400: #f18512;
+  --colors\/kai\/esa-secondary\/50: #fde6cc;
+  --colors\/kai\/esa-secondary\/500: #f08201;
+  --colors\/kai\/esa-secondary\/600: #d87401;
+  --colors\/kai\/esa-secondary\/700: #b96201;
+  --colors\/kai\/esa-secondary\/800: #9a4f00;
+  --colors\/kai\/esa-secondary\/900: #7b3d00;
+  --colors\/kai\/esa-secondary\/950: #653700;
+  --colors\/kai\/logistik-primary\/100: #c2c1e0;
+  --colors\/kai\/logistik-primary\/200: #a3a1d1;
+  --colors\/kai\/logistik-primary\/25: #e9e9f1;
+  --colors\/kai\/logistik-primary\/300: #7f7cc0;
+  --colors\/kai\/logistik-primary\/400: #5551a3;
+  --colors\/kai\/logistik-primary\/50: #d9d9eb;
+  --colors\/kai\/logistik-primary\/500: #252170;
+  --colors\/kai\/logistik-primary\/600: #211e63;
+  --colors\/kai\/logistik-primary\/700: #1c1a55;
+  --colors\/kai\/logistik-primary\/800: #171647;
+  --colors\/kai\/logistik-primary\/900: #131239;
+  --colors\/kai\/logistik-primary\/950: #100e2f;
+  --colors\/kai\/logistik-secondary\/100: #ffd59b;
+  --colors\/kai\/logistik-secondary\/200: #ffbf69;
+  --colors\/kai\/logistik-secondary\/25: #fff5e6;
+  --colors\/kai\/logistik-secondary\/300: #ffa836;
+  --colors\/kai\/logistik-secondary\/400: #ff9f12;
+  --colors\/kai\/logistik-secondary\/50: #ffeacd;
+  --colors\/kai\/logistik-secondary\/500: #ff9b00;
+  --colors\/kai\/logistik-secondary\/600: #e68b00;
+  --colors\/kai\/logistik-secondary\/700: #c67600;
+  --colors\/kai\/logistik-secondary\/800: #a66000;
+  --colors\/kai\/logistik-secondary\/900: #854a00;
+  --colors\/kai\/logistik-secondary\/950: #6b4100;
+  --colors\/kai\/pariwisata-primary\/100: #f8d796;
+  --colors\/kai\/pariwisata-primary\/200: #f4c160;
+  --colors\/kai\/pariwisata-primary\/25: #fdf6e6;
+  --colors\/kai\/pariwisata-primary\/300: #f0ab2a;
+  --colors\/kai\/pariwisata-primary\/400: #f0a40d;
+  --colors\/kai\/pariwisata-primary\/50: #fcebcb;
+  --colors\/kai\/pariwisata-primary\/500: #efa200;
+  --colors\/kai\/pariwisata-primary\/600: #d79200;
+  --colors\/kai\/pariwisata-primary\/700: #b57b00;
+  --colors\/kai\/pariwisata-primary\/800: #936300;
+  --colors\/kai\/pariwisata-primary\/900: #744e00;
+  --colors\/kai\/pariwisata-primary\/950: #644400;
+  --colors\/kai\/pariwisata-secondary\/100: #efa4da;
+  --colors\/kai\/pariwisata-secondary\/200: #e678c7;
+  --colors\/kai\/pariwisata-secondary\/25: #fbe8f6;
+  --colors\/kai\/pariwisata-secondary\/300: #de4cb4;
+  --colors\/kai\/pariwisata-secondary\/400: #d92fa8;
+  --colors\/kai\/pariwisata-secondary\/50: #f6d1ec;
+  --colors\/kai\/pariwisata-secondary\/500: #d717a7;
+  --colors\/kai\/pariwisata-secondary\/600: #c21596;
+  --colors\/kai\/pariwisata-secondary\/700: #a0117d;
+  --colors\/kai\/pariwisata-secondary\/800: #7e0d63;
+  --colors\/kai\/pariwisata-secondary\/900: #620a4c;
+  --colors\/kai\/pariwisata-secondary\/950: #5a0a46;
+  --colors\/kai\/primary\/100: #c2c1e0;
+  --colors\/kai\/primary\/200: #a3a1d1;
+  --colors\/kai\/primary\/25: #e9e9f1;
+  --colors\/kai\/primary\/300: #7f7cc0;
+  --colors\/kai\/primary\/400: #5551a3;
+  --colors\/kai\/primary\/50: #d9d9eb;
+  --colors\/kai\/primary\/500: #252271;
+  --colors\/kai\/primary\/600: #201e64;
+  --colors\/kai\/primary\/700: #1c1a57;
+  --colors\/kai\/primary\/800: #181649;
+  --colors\/kai\/primary\/900: #14123c;
+  --colors\/kai\/primary\/950: #100e2f;
+  --colors\/kai\/property-primary\/100: #f7c19d;
+  --colors\/kai\/property-primary\/200: #f2a16b;
+  --colors\/kai\/property-primary\/25: #fdf0e7;
+  --colors\/kai\/property-primary\/300: #ee8139;
+  --colors\/kai\/property-primary\/400: #e86e16;
+  --colors\/kai\/property-primary\/50: #fbe0ce;
+  --colors\/kai\/property-primary\/500: #e6690a;
+  --colors\/kai\/property-primary\/600: #cf5e09;
+  --colors\/kai\/property-primary\/700: #af4f07;
+  --colors\/kai\/property-primary\/800: #8f3f06;
+  --colors\/kai\/property-primary\/900: #713105;
+  --colors\/kai\/property-primary\/950: #612c04;
+  --colors\/kai\/property-secondary\/100: #cfb6ed;
+  --colors\/kai\/property-secondary\/200: #b38ee3;
+  --colors\/kai\/property-secondary\/25: #f3ecfa;
+  --colors\/kai\/property-secondary\/300: #9a66d8;
+  --colors\/kai\/property-secondary\/400: #8a49d1;
+  --colors\/kai\/property-secondary\/50: #e7daf6;
+  --colors\/kai\/property-secondary\/500: #833ccd;
+  --colors\/kai\/property-secondary\/600: #7636b9;
+  --colors\/kai\/property-secondary\/700: #612c97;
+  --colors\/kai\/property-secondary\/800: #4c2275;
+  --colors\/kai\/property-secondary\/900: #3c1b5d;
+  --colors\/kai\/property-secondary\/950: #371956;
+  --colors\/kai\/secondary\/100: #fbc4a8;
+  --colors\/kai\/secondary\/200: #f8a67b;
+  --colors\/kai\/secondary\/25: #fef0e9;
+  --colors\/kai\/secondary\/300: #f5874e;
+  --colors\/kai\/secondary\/400: #f26f34;
+  --colors\/kai\/secondary\/50: #fde1d3;
+  --colors\/kai\/secondary\/500: #f06a25;
+  --colors\/kai\/secondary\/600: #d35e22;
+  --colors\/kai\/secondary\/700: #b6511e;
+  --colors\/kai\/secondary\/800: #98441a;
+  --colors\/kai\/secondary\/900: #7b3716;
+  --colors\/kai\/secondary\/950: #652d10;
+  --colors\/kai\/service-primary\/100: #b8dfb8;
+  --colors\/kai\/service-primary\/200: #8fcc8f;
+  --colors\/kai\/service-primary\/25: #ecf7ec;
+  --colors\/kai\/service-primary\/300: #66b866;
+  --colors\/kai\/service-primary\/400: #4ead4f;
+  --colors\/kai\/service-primary\/50: #d9eed9;
+  --colors\/kai\/service-primary\/500: #41ab42;
+  --colors\/kai\/service-primary\/600: #3a9a3b;
+  --colors\/kai\/service-primary\/700: #2f7e30;
+  --colors\/kai\/service-primary\/800: #246224;
+  --colors\/kai\/service-primary\/900: #1d4d1e;
+  --colors\/kai\/service-primary\/950: #1b481c;
+  --colors\/kai\/service-secondary\/100: #cbb0fb;
+  --colors\/kai\/service-secondary\/200: #ae86fa;
+  --colors\/kai\/service-secondary\/25: #f2ebfe;
+  --colors\/kai\/service-secondary\/300: #965cf8;
+  --colors\/kai\/service-secondary\/400: #8740fa;
+  --colors\/kai\/service-secondary\/50: #e5d7fd;
+  --colors\/kai\/service-secondary\/500: #7e32f9;
+  --colors\/kai\/service-secondary\/600: #712de0;
+  --colors\/kai\/service-secondary\/700: #5c25b7;
+  --colors\/kai\/service-secondary\/800: #481d8e;
+  --colors\/kai\/service-secondary\/900: #391670;
+  --colors\/kai\/service-secondary\/950: #351569;
+  --container-max-width-desktop: 1280;
+  --container-padding-desktop: 32;
+  --container-padding-mobile: 16;
+  --paragraph-max-width: 720;
+  --width-2xl: 1024;
+  --width-3xl: 1280;
+  --width-4xl: 1440;
+  --width-5xl: 1600;
+  --width-6xl: 1920;
+  --width-lg: 640;
+  --width-md: 560;
+  --width-sm: 480;
+  --width-xl: 768;
+  --width-xs: 384;
+  --width-xxs: 320;
+  --radius-2xl: 16;
+  --radius-3xl: 20;
+  --radius-4xl: 24;
+  --radius-full: 9999;
+  --radius-lg: 10;
+  --radius-md: 8;
+  --radius-none: 0;
+  --radius-sm: 6;
+  --radius-xl: 12;
+  --radius-xs: 4;
+  --radius-xxs: 2;
+  --colors\/background\/bg-active: #fafafa;
+  --colors\/background\/bg-brand-primary: #d9d9eb;
+  --colors\/background\/bg-brand-primary_alt: #d9d9eb;
+  --colors\/background\/bg-brand-secondary: #c2c1e0;
+  --colors\/background\/bg-brand-section: var(--colors\/kai\/primary\/800);
+  --colors\/background\/bg-brand-section_subtle: var(--colors\/kai\/primary\/700);
+  --colors\/background\/bg-brand-solid: var(--colors\/kai\/primary\/600);
+  --colors\/background\/bg-brand-solid_hover: var(--colors\/kai\/primary\/700);
+  --colors\/background\/bg-disabled: #f5f5f5;
+  --colors\/background\/bg-disabled_subtle: #fafafa;
+  --colors\/background\/bg-error-primary: #fef3f2;
+  --colors\/background\/bg-error-secondary: #fee4e2;
+  --colors\/background\/bg-error-solid: #d92d20;
+  --colors\/background\/bg-error-solid_hover: #b42318;
+  --colors\/background\/bg-overlay: #0a0d12;
+  --colors\/background\/bg-primary: #fff;
+  --colors\/background\/bg-primary_alt: #fff;
+  --colors\/background\/bg-primary_hover: #fafafa;
+  --colors\/background\/bg-primary-solid: #0a0d12;
+  --colors\/background\/bg-quaternary: #e9eaeb;
+  --colors\/background\/bg-secondary: #fafafa;
+  --colors\/background\/bg-secondary_alt: #fafafa;
+  --colors\/background\/bg-secondary_hover: #f5f5f5;
+  --colors\/background\/bg-secondary_subtle: #fdfdfd;
+  --colors\/background\/bg-secondary-solid: #535862;
+  --colors\/background\/bg-success-primary: #ecfdf3;
+  --colors\/background\/bg-success-secondary: #dcfae6;
+  --colors\/background\/bg-success-solid: #079455;
+  --colors\/background\/bg-tertiary: #f5f5f5;
+  --colors\/background\/bg-warning-primary: #fffaeb;
+  --colors\/background\/bg-warning-secondary: #fef0c7;
+  --colors\/background\/bg-warning-solid: #dc6803;
+  --colors\/border\/border-brand: var(--colors\/kai\/primary\/500);
+  --colors\/border\/border-brand_alt: var(--colors\/kai\/primary\/600);
+  --colors\/border\/border-disabled: #d5d7da;
+  --colors\/border\/border-disabled_subtle: #e9eaeb;
+  --colors\/border\/border-error: #f04438;
+  --colors\/border\/border-error_subtle: #fda29b;
+  --colors\/border\/border-primary: #d5d7da;
+  --colors\/border\/border-secondary: #e9eaeb;
+  --colors\/border\/border-secondary_alt: #00000014;
+  --colors\/border\/border-tertiary: #f5f5f5;
+  --colors\/foreground\/fg-brand-primary_alt: var(--colors\/foreground\/fg-brand-primary-\(600\));
+  --colors\/foreground\/fg-brand-primary-\(600\): var(--colors\/kai\/primary\/600);
+  --colors\/foreground\/fg-brand-secondary_alt: var(--colors\/foreground\/fg-brand-secondary-\(500\));
+  --colors\/foreground\/fg-brand-secondary_hover: var(--colors\/kai\/primary\/600);
+  --colors\/foreground\/fg-brand-secondary-\(500\): var(--colors\/kai\/primary\/500);
+  --colors\/foreground\/fg-disabled: #a4a7ae;
+  --colors\/foreground\/fg-disabled_subtle: #d5d7da;
+  --colors\/foreground\/fg-error-primary: #d92d20;
+  --colors\/foreground\/fg-error-secondary: #f04438;
+  --colors\/foreground\/fg-primary-\(900\): #181d27;
+  --colors\/foreground\/fg-quaternary_hover: #717680;
+  --colors\/foreground\/fg-quaternary-\(400\): #a4a7ae;
+  --colors\/foreground\/fg-secondary_hover: #252b37;
+  --colors\/foreground\/fg-secondary-\(700\): #414651;
+  --colors\/foreground\/fg-success-primary: #079455;
+  --colors\/foreground\/fg-success-secondary: #17b26a;
+  --colors\/foreground\/fg-tertiary_hover: #414651;
+  --colors\/foreground\/fg-tertiary-\(600\): #535862;
+  --colors\/foreground\/fg-warning-primary: #dc6803;
+  --colors\/foreground\/fg-warning-secondary: #f79009;
+  --colors\/foreground\/fg-white: #fff;
+  --colors\/text\/text-brand-primary-\(900\): var(--colors\/kai\/primary\/900);
+  --colors\/text\/text-brand-secondary_hover: var(--colors\/kai\/primary\/800);
+  --colors\/text\/text-brand-secondary-\(700\): var(--colors\/kai\/primary\/700);
+  --colors\/text\/text-brand-tertiary_alt: var(--colors\/kai\/primary\/600);
+  --colors\/text\/text-brand-tertiary-\(600\): var(--colors\/kai\/primary\/600);
+  --colors\/text\/text-disabled: #717680;
+  --colors\/text\/text-error-primary_hover: #b42318;
+  --colors\/text\/text-error-primary-\(600\): #d92d20;
+  --colors\/text\/text-placeholder: #717680;
+  --colors\/text\/text-placeholder_subtle: #d5d7da;
+  --colors\/text\/text-primary_on-brand: #fff;
+  --colors\/text\/text-primary-\(900\): #181d27;
+  --colors\/text\/text-quaternary_on-brand: var(--colors\/kai\/primary\/300);
+  --colors\/text\/text-quaternary-\(500\): #717680;
+  --colors\/text\/text-secondary_hover: #252b37;
+  --colors\/text\/text-secondary_on-brand: var(--colors\/kai\/primary\/200);
+  --colors\/text\/text-secondary-\(700\): #414651;
+  --colors\/text\/text-success-primary-\(600\): #079455;
+  --colors\/text\/text-tertiary_hover: #414651;
+  --colors\/text\/text-tertiary_on-brand: var(--colors\/kai\/primary\/200);
+  --colors\/text\/text-tertiary-\(600\): #535862;
+  --colors\/text\/text-warning-primary-\(600\): #dc6803;
+  --colors\/text\/text-white: #fff;
+  --sidebar: #0000;
+  --sidebar-accent: #252271;
+  --sidebar-accent-foreground: #fff;
+  --sidebar-border: #e9eaeb;
+  --sidebar-foreground: #414651;
+  --sidebar-primary: #201e64;
+  --sidebar-primary-foreground: #fff;
+  --sidebar-ring: #252271;
+  --spacing-10xl: 128;
+  --spacing-11xl: 160;
+  --spacing-2xl: 20;
+  --spacing-3xl: 24;
+  --spacing-4xl: 32;
+  --spacing-5xl: 40;
+  --spacing-6xl: 48;
+  --spacing-7xl: 64;
+  --spacing-8xl: 80;
+  --spacing-9xl: 96;
+  --spacing-lg: 12;
+  --spacing-md: 8;
+  --spacing-none: 0;
+  --spacing-sm: 6;
+  --spacing-xl: 16;
+  --spacing-xs: 4;
+  --spacing-xxs: 2;
+  --font-size\/display-2xl: 72;
+  --font-size\/display-lg: 48;
+  --font-size\/display-md: 36;
+  --font-size\/display-sm: 30;
+  --font-size\/display-xl: 60;
+  --font-size\/display-xs: 24;
+  --font-size\/text-lg: 18;
+  --font-size\/text-md: 16;
+  --font-size\/text-sm: 14;
+  --font-size\/text-xl: 20;
+  --font-size\/text-xs: 12;
+  --line-height\/display-2xl: 90;
+  --line-height\/display-lg: 60;
+  --line-height\/display-md: 44;
+  --line-height\/display-sm: 38;
+  --line-height\/display-xl: 72;
+  --line-height\/display-xs: 32;
+  --line-height\/text-lg: 28;
+  --line-height\/text-md: 24;
+  --line-height\/text-sm: 20;
+  --line-height\/text-xl: 30;
+  --line-height\/text-xs: 18;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-size: 16px;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --leading-snug: 1.375;
+  --leading-tight: 1.25;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-sm: .875rem;
+  --text-xl: 1.25rem;
+  --text-xs: .75rem;
+  --tracking-tight: -.025em;
+  --tracking-wide: .025em;
+  --tracking-widest: .1em;
+  --component-colors\/utility\/blue-dark\/utility-blue-dark-100: #d1e0ff;
+  --component-colors\/utility\/blue-dark\/utility-blue-dark-200: #b2ccff;
+  --component-colors\/utility\/blue-dark\/utility-blue-dark-300: #84adff;
+  --component-colors\/utility\/blue-dark\/utility-blue-dark-400: #528bff;
+  --component-colors\/utility\/blue-dark\/utility-blue-dark-50: #eff4ff;
+  --component-colors\/utility\/blue-dark\/utility-blue-dark-500: #2970ff;
+  --component-colors\/utility\/blue-dark\/utility-blue-dark-600: #155eef;
+  --component-colors\/utility\/blue-dark\/utility-blue-dark-700: #004eeb;
+  --component-colors\/utility\/blue-light\/utility-blue-light-100: #e0f2fe;
+  --component-colors\/utility\/blue-light\/utility-blue-light-200: #b9e6fe;
+  --component-colors\/utility\/blue-light\/utility-blue-light-300: #7cd4fd;
+  --component-colors\/utility\/blue-light\/utility-blue-light-400: #36bffa;
+  --component-colors\/utility\/blue-light\/utility-blue-light-50: #f0f9ff;
+  --component-colors\/utility\/blue-light\/utility-blue-light-500: #0ba5ec;
+  --component-colors\/utility\/blue-light\/utility-blue-light-600: #0086c9;
+  --component-colors\/utility\/blue-light\/utility-blue-light-700: #026aa2;
+  --component-colors\/utility\/blue\/utility-blue-100: #d1e9ff;
+  --component-colors\/utility\/blue\/utility-blue-200: #b2ddff;
+  --component-colors\/utility\/blue\/utility-blue-300: #84caff;
+  --component-colors\/utility\/blue\/utility-blue-400: #53b1fd;
+  --component-colors\/utility\/blue\/utility-blue-50: #eff8ff;
+  --component-colors\/utility\/blue\/utility-blue-500: #2e90fa;
+  --component-colors\/utility\/blue\/utility-blue-600: #1570ef;
+  --component-colors\/utility\/blue\/utility-blue-700: #175cd3;
+  --component-colors\/utility\/brand\/utility-brand-100: var(--colors\/kai\/primary\/100);
+  --component-colors\/utility\/brand\/utility-brand-100_alt: var(--colors\/kai\/primary\/100);
+  --component-colors\/utility\/brand\/utility-brand-200: var(--colors\/kai\/primary\/200);
+  --component-colors\/utility\/brand\/utility-brand-200_alt: var(--colors\/kai\/primary\/200);
+  --component-colors\/utility\/brand\/utility-brand-300: var(--colors\/kai\/primary\/300);
+  --component-colors\/utility\/brand\/utility-brand-300_alt: var(--colors\/kai\/primary\/300);
+  --component-colors\/utility\/brand\/utility-brand-400: var(--colors\/kai\/primary\/400);
+  --component-colors\/utility\/brand\/utility-brand-400_alt: var(--colors\/kai\/primary\/400);
+  --component-colors\/utility\/brand\/utility-brand-50: var(--colors\/kai\/primary\/50);
+  --component-colors\/utility\/brand\/utility-brand-50_alt: var(--colors\/kai\/primary\/50);
+  --component-colors\/utility\/brand\/utility-brand-500: var(--colors\/kai\/primary\/500);
+  --component-colors\/utility\/brand\/utility-brand-500_alt: var(--colors\/kai\/primary\/500);
+  --component-colors\/utility\/brand\/utility-brand-600: var(--colors\/kai\/primary\/600);
+  --component-colors\/utility\/brand\/utility-brand-600_alt: var(--colors\/kai\/primary\/600);
+  --component-colors\/utility\/brand\/utility-brand-700: var(--colors\/kai\/primary\/700);
+  --component-colors\/utility\/brand\/utility-brand-700_alt: var(--colors\/kai\/primary\/700);
+  --component-colors\/utility\/brand\/utility-brand-800: var(--colors\/kai\/primary\/800);
+  --component-colors\/utility\/brand\/utility-brand-800_alt: var(--colors\/kai\/primary\/800);
+  --component-colors\/utility\/brand\/utility-brand-900: var(--colors\/kai\/primary\/900);
+  --component-colors\/utility\/brand\/utility-brand-900_alt: var(--colors\/kai\/primary\/900);
+  --component-colors\/utility\/error\/utility-error-100: #fee4e2;
+  --component-colors\/utility\/error\/utility-error-200: #fecdca;
+  --component-colors\/utility\/error\/utility-error-300: #fda29b;
+  --component-colors\/utility\/error\/utility-error-400: #f97066;
+  --component-colors\/utility\/error\/utility-error-50: #fef3f2;
+  --component-colors\/utility\/error\/utility-error-500: #f04438;
+  --component-colors\/utility\/error\/utility-error-600: #d92d20;
+  --component-colors\/utility\/error\/utility-error-700: #b42318;
+  --component-colors\/utility\/fuchsia\/utility-fuchsia-100: #fbe8ff;
+  --component-colors\/utility\/fuchsia\/utility-fuchsia-200: #f6d0fe;
+  --component-colors\/utility\/fuchsia\/utility-fuchsia-300: #eeaafd;
+  --component-colors\/utility\/fuchsia\/utility-fuchsia-400: #e478fa;
+  --component-colors\/utility\/fuchsia\/utility-fuchsia-50: #fdf4ff;
+  --component-colors\/utility\/fuchsia\/utility-fuchsia-500: #d444f1;
+  --component-colors\/utility\/fuchsia\/utility-fuchsia-600: #ba24d5;
+  --component-colors\/utility\/fuchsia\/utility-fuchsia-700: #9f1ab1;
+  --component-colors\/utility\/gray-blue\/utility-gray-blue-100: #eaecf5;
+  --component-colors\/utility\/gray-blue\/utility-gray-blue-200: #d5d9eb;
+  --component-colors\/utility\/gray-blue\/utility-gray-blue-300: #b3b8db;
+  --component-colors\/utility\/gray-blue\/utility-gray-blue-400: #717bbc;
+  --component-colors\/utility\/gray-blue\/utility-gray-blue-50: #f8f9fc;
+  --component-colors\/utility\/gray-blue\/utility-gray-blue-500: #4e5ba6;
+  --component-colors\/utility\/gray-blue\/utility-gray-blue-600: #3e4784;
+  --component-colors\/utility\/gray-blue\/utility-gray-blue-700: #363f72;
+  --component-colors\/utility\/gray\/utility-gray-100: #f5f5f5;
+  --component-colors\/utility\/gray\/utility-gray-200: #e9eaeb;
+  --component-colors\/utility\/gray\/utility-gray-300: #d5d7da;
+  --component-colors\/utility\/gray\/utility-gray-400: #a4a7ae;
+  --component-colors\/utility\/gray\/utility-gray-50: #fafafa;
+  --component-colors\/utility\/gray\/utility-gray-500: #717680;
+  --component-colors\/utility\/gray\/utility-gray-600: #535862;
+  --component-colors\/utility\/gray\/utility-gray-700: #414651;
+  --component-colors\/utility\/gray\/utility-gray-800: #252b37;
+  --component-colors\/utility\/gray\/utility-gray-900: #181d27;
+  --component-colors\/utility\/green\/utility-green-100: #d3f8df;
+  --component-colors\/utility\/green\/utility-green-200: #aaf0c4;
+  --component-colors\/utility\/green\/utility-green-300: #73e2a3;
+  --component-colors\/utility\/green\/utility-green-400: #3ccb7f;
+  --component-colors\/utility\/green\/utility-green-50: #edfcf2;
+  --component-colors\/utility\/green\/utility-green-500: #16b364;
+  --component-colors\/utility\/green\/utility-green-600: #099250;
+  --component-colors\/utility\/green\/utility-green-700: #087443;
+  --component-colors\/utility\/indigo\/utility-indigo-100: #e0eaff;
+  --component-colors\/utility\/indigo\/utility-indigo-200: #c7d7fe;
+  --component-colors\/utility\/indigo\/utility-indigo-300: #a4bcfd;
+  --component-colors\/utility\/indigo\/utility-indigo-400: #8098f9;
+  --component-colors\/utility\/indigo\/utility-indigo-50: #eef4ff;
+  --component-colors\/utility\/indigo\/utility-indigo-500: #6172f3;
+  --component-colors\/utility\/indigo\/utility-indigo-600: #444ce7;
+  --component-colors\/utility\/indigo\/utility-indigo-700: #3538cd;
+  --component-colors\/utility\/orange-dark\/utility-orange-dark-100: #ffe6d5;
+  --component-colors\/utility\/orange-dark\/utility-orange-dark-200: #ffd6ae;
+  --component-colors\/utility\/orange-dark\/utility-orange-dark-300: #ff9c66;
+  --component-colors\/utility\/orange-dark\/utility-orange-dark-400: #ff692e;
+  --component-colors\/utility\/orange-dark\/utility-orange-dark-50: #fff4ed;
+  --component-colors\/utility\/orange-dark\/utility-orange-dark-500: #ff4405;
+  --component-colors\/utility\/orange-dark\/utility-orange-dark-600: #e62e05;
+  --component-colors\/utility\/orange-dark\/utility-orange-dark-700: #bc1b06;
+  --component-colors\/utility\/orange\/utility-orange-100: #fdead7;
+  --component-colors\/utility\/orange\/utility-orange-200: #f9dbaf;
+  --component-colors\/utility\/orange\/utility-orange-300: #f7b27a;
+  --component-colors\/utility\/orange\/utility-orange-400: #f38744;
+  --component-colors\/utility\/orange\/utility-orange-50: #fef6ee;
+  --component-colors\/utility\/orange\/utility-orange-500: #ef6820;
+  --component-colors\/utility\/orange\/utility-orange-600: #e04f16;
+  --component-colors\/utility\/orange\/utility-orange-700: #b93815;
+  --component-colors\/utility\/pink\/utility-pink-100: #fce7f6;
+  --component-colors\/utility\/pink\/utility-pink-200: #fcceee;
+  --component-colors\/utility\/pink\/utility-pink-300: #faa7e0;
+  --component-colors\/utility\/pink\/utility-pink-400: #f670c7;
+  --component-colors\/utility\/pink\/utility-pink-50: #fdf2fa;
+  --component-colors\/utility\/pink\/utility-pink-500: #ee46bc;
+  --component-colors\/utility\/pink\/utility-pink-600: #dd2590;
+  --component-colors\/utility\/pink\/utility-pink-700: #c11574;
+  --component-colors\/utility\/purple\/utility-purple-100: #ebe9fe;
+  --component-colors\/utility\/purple\/utility-purple-200: #d9d6fe;
+  --component-colors\/utility\/purple\/utility-purple-300: #bdb4fe;
+  --component-colors\/utility\/purple\/utility-purple-400: #9b8afb;
+  --component-colors\/utility\/purple\/utility-purple-50: #f4f3ff;
+  --component-colors\/utility\/purple\/utility-purple-500: #7a5af8;
+  --component-colors\/utility\/purple\/utility-purple-600: #6938ef;
+  --component-colors\/utility\/purple\/utility-purple-700: #5925dc;
+  --component-colors\/utility\/success\/utility-success-100: #dcfae6;
+  --component-colors\/utility\/success\/utility-success-200: #abefc6;
+  --component-colors\/utility\/success\/utility-success-300: #75e0a7;
+  --component-colors\/utility\/success\/utility-success-400: #47cd89;
+  --component-colors\/utility\/success\/utility-success-50: #ecfdf3;
+  --component-colors\/utility\/success\/utility-success-500: #17b26a;
+  --component-colors\/utility\/success\/utility-success-600: #079455;
+  --component-colors\/utility\/success\/utility-success-700: #067647;
+  --component-colors\/utility\/warning\/utility-warning-100: #fef0c7;
+  --component-colors\/utility\/warning\/utility-warning-200: #fedf89;
+  --component-colors\/utility\/warning\/utility-warning-300: #fec84b;
+  --component-colors\/utility\/warning\/utility-warning-400: #fdb022;
+  --component-colors\/utility\/warning\/utility-warning-50: #fffaeb;
+  --component-colors\/utility\/warning\/utility-warning-500: #f79009;
+  --component-colors\/utility\/warning\/utility-warning-600: #dc6803;
+  --component-colors\/utility\/warning\/utility-warning-700: #b54708;
+  --component-colors\/utility\/yellow\/utility-yellow-100: #fef7c3;
+  --component-colors\/utility\/yellow\/utility-yellow-200: #feee95;
+  --component-colors\/utility\/yellow\/utility-yellow-300: #fde272;
+  --component-colors\/utility\/yellow\/utility-yellow-400: #fac515;
+  --component-colors\/utility\/yellow\/utility-yellow-50: #fefbe8;
+  --component-colors\/utility\/yellow\/utility-yellow-500: #eaaa08;
+  --component-colors\/utility\/yellow\/utility-yellow-600: #ca8504;
+  --component-colors\/utility\/yellow\/utility-yellow-700: #a15c07;
+}
+
+.body-1-bold {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.body-1-regular {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.body-1-semibold {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.body-2-bold {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.body-2-regular {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.body-2-semibold {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.caption-bold {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.caption-regular {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.caption-semibold {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.display-2xl-bold {
+  font-family: Inter;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 90px;
+}
+
+.display-2xl-medium {
+  font-family: Inter;
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 90px;
+}
+
+.display-2xl-regular {
+  font-family: Inter;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 90px;
+}
+
+.display-2xl-semibold {
+  font-family: Inter;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 90px;
+}
+
+.display-lg-bold {
+  font-family: Inter;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+.display-lg-medium {
+  font-family: Inter;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+.display-lg-regular {
+  font-family: Inter;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.display-lg-semibold {
+  font-family: Inter;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.display-md-bold {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.display-md-medium {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 44px;
+}
+
+.display-md-regular {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 44px;
+}
+
+.display-md-semibold {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+}
+
+.display-sm-bold {
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+}
+
+.display-sm-medium {
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38px;
+}
+
+.display-sm-regular {
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+.display-sm-semibold {
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 38px;
+}
+
+.display-xl-bold {
+  font-family: Inter;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 72px;
+}
+
+.display-xl-medium {
+  font-family: Inter;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 72px;
+}
+
+.display-xl-regular {
+  font-family: Inter;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 72px;
+}
+
+.display-xl-semibold {
+  font-family: Inter;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 72px;
+}
+
+.display-xs-bold {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.display-xs-medium {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.display-xs-regular {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.display-xs-semibold {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.h1-bold {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+.h1-regular {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.h1-semibold {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.h2-bold {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.h2-regular {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.h2-semibold {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.large-bold {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.large-regular {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.large-semibold {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.overline-1-bold {
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+}
+
+.overline-1-regular {
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.overline-1-semibold {
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+}
+
+.overline-2-bold {
+  font-family: Inter;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 12px;
+}
+
+.overline-2-regular {
+  font-family: Inter;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.overline-2-semibold {
+  font-family: Inter;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 12px;
+}
+
+.subtitle-1-bold {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.subtitle-1-regular {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.subtitle-1-semibold {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.subtitle-2-bold {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.subtitle-2-regular {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.subtitle-2-semibold {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}

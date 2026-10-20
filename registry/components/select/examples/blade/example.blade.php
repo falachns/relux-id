@@ -1,0 +1,1 @@
+<x-relux::select :options="['GMR' => 'Gambir (GMR)', 'BD' => 'Bandung (BD)']" />

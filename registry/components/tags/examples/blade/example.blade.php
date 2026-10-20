@@ -1,0 +1,1 @@
+<x-relux::tag tone="brand" :removable="true">Eksekutif SS</x-relux::tag>

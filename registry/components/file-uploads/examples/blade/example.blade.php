@@ -1,0 +1,1 @@
+<x-relux::file-upload name="identitas" helperText="Unggah scan KTP / Identitas resmi" />

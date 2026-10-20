@@ -1,0 +1,41 @@
+{
+  "$schema": "https://relux.kai.id/schema/component.json",
+  "name": "Stepper",
+  "slug": "steppers",
+  "version": "1.0.0",
+  "status": "stable",
+  "category": "Application UI",
+  "description": "Indikator langkah bertahap untuk alur pemesanan tiket atau verifikasi dinas.",
+  "figma": {
+    "file": "Design System KAI v.1",
+    "node": "124:5320"
+  },
+  "packages": {
+    "blade": "kai/relux-ui",
+    "react": "@kai/relux-react",
+    "angular": "@kai/relux-angular",
+    "css": "@kai/relux-css"
+  },
+  "dependencies": [
+    "@kai/relux-css"
+  ],
+  "props": [
+    {
+      "name": "orientation",
+      "type": "horizontal | vertical",
+      "default": "horizontal"
+    },
+    {
+      "name": "steps",
+      "type": "StepItem[]",
+      "default": "[]"
+    }
+  ],
+  "variants": [
+    "horizontal",
+    "vertical",
+    "completed",
+    "current",
+    "error"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://relux.kai.id/schema/component.json",
+  "name": "Tooltip",
+  "slug": "tooltips",
+  "version": "1.0.0",
+  "status": "stable",
+  "category": "Feedback",
+  "description": "Informasi kontekstual ringkas yang muncul saat hover atau fokus.",
+  "figma": {
+    "file": "Design System KAI v.1",
+    "node": "124:5020"
+  },
+  "packages": {
+    "blade": "kai/relux-ui",
+    "react": "@kai/relux-react",
+    "angular": "@kai/relux-angular",
+    "css": "@kai/relux-css"
+  },
+  "dependencies": [
+    "@kai/relux-css"
+  ],
+  "props": [
+    {
+      "name": "content",
+      "type": "string",
+      "default": "-"
+    },
+    {
+      "name": "placement",
+      "type": "top | right | bottom | left",
+      "default": "top"
+    }
+  ],
+  "variants": [
+    "light",
+    "dark"
+  ]
+}

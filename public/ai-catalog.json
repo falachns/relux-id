@@ -1,0 +1,41 @@
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "identifier": "urn:air:relux-kai.figma.site:docs:foundations",
+      "displayName": "RelUX Foundations / Fondasi RelUX",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://relux-kai.figma.site/llms.txt",
+      "description": "Canonical Make Kit 0.0.2 tokens for colors, typography, spacing, layout, radius, effects, iconography, and states.",
+      "representativeQueries": [
+        "What is the canonical KAI primary token?",
+        "Apa class tipografi RelUX?",
+        "Which spacing and radius tokens are available?"
+      ]
+    },
+    {
+      "identifier": "urn:air:relux-kai.figma.site:docs:components",
+      "displayName": "RelUX Components / Komponen RelUX",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://relux-kai.figma.site/llms.txt",
+      "description": "Accessible React and HTML/CSS examples for every component group in the KAI Make Kit.",
+      "representativeQueries": [
+        "Show an accessible RelUX button example",
+        "Bagaimana membuat Data Table RelUX?",
+        "Which App UI patterns are available?"
+      ]
+    },
+    {
+      "identifier": "urn:air:relux-kai.figma.site:docs:examples",
+      "displayName": "RelUX Example Pages / Halaman Contoh RelUX",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://relux-kai.figma.site/llms.txt",
+      "description": "KAI operations dashboard, public landing page, and ESA Google Authenticator guide.",
+      "representativeQueries": [
+        "Show the KAI dashboard pattern",
+        "Apa alur Google Authenticator ESA Mobile?",
+        "How is the KAI landing page composed?"
+      ]
+    }
+  ]
+}

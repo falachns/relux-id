@@ -1,0 +1,25 @@
+{
+  "name": "@kai/relux-angular",
+  "version": "1.0.0",
+  "description": "Standalone Angular components and directives for RelUX by KAI Design System",
+  "license": "UNLICENSED",
+  "author": "PT Kereta Api Indonesia (Persero)",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "peerDependencies": {
+    "@angular/core": ">=17.0.0",
+    "@angular/common": ">=17.0.0"
+  }
+}

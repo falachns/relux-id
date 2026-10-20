@@ -1,0 +1,45 @@
+{
+  "$schema": "https://relux.kai.id/schema/component.json",
+  "name": "Input",
+  "slug": "inputs",
+  "version": "1.0.0",
+  "status": "stable",
+  "category": "Form Controls",
+  "description": "Field input teks tunggal untuk menangkap data pengguna.",
+  "figma": {
+    "file": "Design System KAI v.1",
+    "node": "124:4620"
+  },
+  "packages": {
+    "blade": "kai/relux-ui",
+    "react": "@kai/relux-react",
+    "angular": "@kai/relux-angular",
+    "css": "@kai/relux-css"
+  },
+  "dependencies": [
+    "@kai/relux-css"
+  ],
+  "props": [
+    {
+      "name": "type",
+      "type": "text | email | password | number | date",
+      "default": "text"
+    },
+    {
+      "name": "isInvalid",
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "default": "false"
+    }
+  ],
+  "variants": [
+    "default",
+    "focus",
+    "error",
+    "disabled"
+  ]
+}

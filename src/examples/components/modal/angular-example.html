@@ -1,0 +1,11 @@
+<!-- Standalone Angular Syntax -->
+<button reluxButton variant="primary" (click)="openDialog()">Buka Modal</button>
+
+<relux-dialog id="ticket-modal">
+  <h3 class="text-lg font-semibold text-foreground">Detail Pemesanan</h3>
+  <p class="mt-2 text-sm text-muted-foreground">Konfirmasi rincian sebelum melanjutkan ke pembayaran.</p>
+  <div class="mt-6 flex justify-end gap-3">
+    <button reluxButton variant="outline" (click)="closeDialog()">Batal</button>
+    <button reluxButton variant="primary">Bayar Sekarang</button>
+  </div>
+</relux-dialog>

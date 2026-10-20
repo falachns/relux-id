@@ -1,0 +1,26 @@
+{
+  "name": "@kai/relux-css",
+  "version": "1.0.0",
+  "description": "Canonical design tokens and CSS component classes for RelUX by KAI",
+  "license": "UNLICENSED",
+  "author": "PT Kereta Api Indonesia (Persero)",
+  "main": "./dist/index.css",
+  "style": "./dist/index.css",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "files": [
+    "dist",
+    "tokens.css",
+    "tokens.json",
+    "components.css",
+    "relux.js"
+  ],
+  "exports": {
+    ".": "./dist/index.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./tokens.json": "./dist/tokens.json",
+    "./components.css": "./dist/components.css",
+    "./relux.js": "./dist/relux.js"
+  }
+}

@@ -1,0 +1,1 @@
+// Badges are static semantic indicators.

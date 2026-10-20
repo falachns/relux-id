@@ -1,0 +1,17 @@
+export {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardBody,
+  CardFooter,
+} from './Card'
+export type {
+  CardProps,
+  CardHeaderProps,
+  CardTitleProps,
+  CardDescriptionProps,
+  CardBodyProps,
+  CardFooterProps,
+  CardVariant,
+} from './Card'
