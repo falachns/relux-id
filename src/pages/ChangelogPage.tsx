@@ -116,10 +116,7 @@ export function ChangelogPage({
         category={t.category}
         title={t.title}
         status="stable"
-        version="v1.0.0-rc4"
         packageName="@kai/relux"
-        figmaUrl="https://relux-kai.figma.site/"
-        githubUrl="https://github.com/keretaapikita/relux"
         description={t.description}
       />
 

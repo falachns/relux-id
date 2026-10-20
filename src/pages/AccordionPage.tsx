@@ -300,10 +300,7 @@ export function AccordionPage({
         category={t.category}
         title={t.title}
         status="stable"
-        version="v1.2.0"
         packageName="@kai/relux-react"
-        figmaUrl="https://relux-kai.figma.site/"
-        githubUrl="https://github.com/keretaapikita/relux"
         description={t.description}
       />
 

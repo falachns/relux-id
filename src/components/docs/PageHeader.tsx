@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from 'react'
 import { StatusBadge, type Status } from './StatusBadge'
-import { ExternalLink, Figma, Github, Check, Copy } from 'lucide-react'
+import { Check, Copy } from 'lucide-react'
 
 export type PageHeaderProps = {
   category?: string
@@ -22,10 +22,7 @@ export function PageHeader({
   description,
   status,
   badge,
-  version = 'v1.0.0',
   packageName,
-  figmaUrl = 'https://www.figma.com/design/Lbqu1BYMXUvO0h9p04G8rz/Design-System-KAI-v.1?m=auto&t=cYWauGA96ZUpgiwM-6',
-  githubUrl = 'https://github.com/falachns/relux-id',
   children,
   className = '',
 }: PageHeaderProps) {
@@ -54,11 +51,6 @@ export function PageHeader({
         </h1>
         <div className="inline-flex items-center gap-2">
           {status && <StatusBadge status={status} />}
-          {version && (
-            <span className="inline-flex items-center rounded-full border border-border bg-card px-2.5 py-0.5 font-mono text-xs font-medium text-muted-foreground shadow-xs">
-              {version}
-            </span>
-          )}
           {badge}
         </div>
       </div>
@@ -69,50 +61,21 @@ export function PageHeader({
         </p>
       )}
 
-      {/* Unified Metadata & Quick Links Cluster (PRD §5.5) */}
-      {(packageName || figmaUrl || githubUrl) && (
+      {packageName && (
         <div className="mt-5 flex flex-wrap items-center gap-2 pt-1 text-xs">
-          {packageName && (
-            <button
-              type="button"
-              onClick={() => handleCopyPkg(packageName)}
-              title={`Salin nama package: ${packageName}`}
-              className="relux-focus inline-flex h-7 items-center gap-1.5 rounded-md border border-border bg-card px-2.5 font-mono text-xs font-medium text-foreground hover:bg-muted hover:border-primary/40 transition-colors active:scale-[0.98] shadow-xs"
-            >
-              <span>{packageName}</span>
-              {copiedPkg ? (
-                <Check className="size-3 text-success" aria-hidden="true" />
-              ) : (
-                <Copy className="size-3 text-muted-foreground" aria-hidden="true" />
-              )}
-            </button>
-          )}
-
-          {figmaUrl && (
-            <a
-              href={figmaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relux-focus inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground shadow-2xs hover:bg-muted hover:border-border/80 transition-colors"
-            >
-              <Figma className="size-3.5 text-primary" aria-hidden="true" />
-              <span>Figma Spec</span>
-              <ExternalLink className="size-3 text-muted-foreground" aria-hidden="true" />
-            </a>
-          )}
-
-          {githubUrl && (
-            <a
-              href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relux-focus inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground shadow-2xs hover:bg-muted hover:border-border/80 transition-colors"
-            >
-              <Github className="size-3.5 text-foreground" aria-hidden="true" />
-              <span>Repository</span>
-              <ExternalLink className="size-3 text-muted-foreground" aria-hidden="true" />
-            </a>
-          )}
+          <button
+            type="button"
+            onClick={() => handleCopyPkg(packageName)}
+            title={`Salin nama package: ${packageName}`}
+            className="relux-focus inline-flex h-7 items-center gap-1.5 rounded-md border border-border bg-card px-2.5 font-mono text-xs font-medium text-foreground hover:bg-muted hover:border-primary/40 transition-colors active:scale-[0.98] shadow-xs"
+          >
+            <span>{packageName}</span>
+            {copiedPkg ? (
+              <Check className="size-3 text-success" aria-hidden="true" />
+            ) : (
+              <Copy className="size-3 text-muted-foreground" aria-hidden="true" />
+            )}
+          </button>
         </div>
       )}
 

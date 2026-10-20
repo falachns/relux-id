@@ -93,7 +93,7 @@ export function DocsLayout({
         onOpenCommandMenu={() => setCommandOpen(true)}
       />
 
-      <div className="mx-auto grid max-w-[1400px] grid-cols-1 lg:grid-cols-[14rem_minmax(0,1fr)] xl:grid-cols-[14rem_minmax(0,1fr)_13rem]">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-[14rem_minmax(0,1fr)] xl:grid-cols-[14rem_minmax(0,1fr)_13rem]">
         {/* Desktop sidebar */}
         <aside
           aria-label={t.navAside}
@@ -135,16 +135,16 @@ export function DocsLayout({
         <main
           id="main-content"
           aria-label={t.main}
-          className="flex min-w-0 flex-1 flex-col justify-between transition-opacity duration-200 ease-out animate-in fade-in-50"
+          className="min-w-0 flex-1 pt-8 pb-16 px-4 sm:px-8 flex flex-col justify-between transition-opacity duration-200 ease-out animate-in fade-in-50"
           tabIndex={-1}
         >
-          <div className="px-4 py-10 lg:px-10">
+          <div>
             {children}
           </div>
 
           <footer
             role="contentinfo"
-            className="bg-background px-4 py-6 text-center"
+            className="bg-background pt-12 pb-6 text-center"
           >
             <p className="font-mono text-xs text-muted-foreground">
               {lang === 'en'

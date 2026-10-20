@@ -217,7 +217,6 @@ export function LogoPage({
         category={t.category}
         title={t.title}
         status="stable"
-        version="v1.0.0"
         packageName="@make-kits/design-system-kai-v-1"
         description={t.description}
       />

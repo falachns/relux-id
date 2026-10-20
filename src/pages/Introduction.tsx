@@ -3,7 +3,7 @@ import { Section } from '../components/docs/Section'
 import { PageHeader } from '../components/docs/PageHeader'
 import { useLocalized, type Localized } from '../lib/i18n'
 import type { SectionId } from '../lib/nav'
-import { CheckCircle2, Layers, ShieldCheck, Clock, ArrowRight } from 'lucide-react'
+import { CheckCircle2, Layers, ShieldCheck, Clock, ArrowRight, ExternalLink, Figma, Github } from 'lucide-react'
 
 type PageCopy = {
   title: string
@@ -244,7 +244,30 @@ export function Introduction({
         title={t.title}
         status="stable"
         description={t.description}
-      />
+      >
+        <div className="mt-5 flex flex-wrap items-center gap-2.5 pt-1">
+          <a
+            href="https://www.figma.com/design/Lbqu1BYMXUvO0h9p04G8rz/Design-System-KAI-v.1?m=auto&t=cYWauGA96ZUpgiwM-6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-border bg-card text-foreground text-xs font-semibold hover:bg-muted hover:border-border transition-colors shadow-2xs"
+          >
+            <Figma className="size-3.5 text-primary" aria-hidden="true" />
+            <span>Figma RelUX</span>
+            <ExternalLink className="size-3 text-muted-foreground" aria-hidden="true" />
+          </a>
+          <a
+            href="https://github.com/falachns/relux-id"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-border bg-card text-foreground text-xs font-semibold hover:bg-muted hover:border-border transition-colors shadow-2xs"
+          >
+            <Github className="size-3.5 text-foreground" aria-hidden="true" />
+            <span>Repo Github</span>
+            <ExternalLink className="size-3 text-muted-foreground" aria-hidden="true" />
+          </a>
+        </div>
+      </PageHeader>
 
       <hr className="mt-8 border-border" />
 

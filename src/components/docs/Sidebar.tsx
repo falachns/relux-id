@@ -84,7 +84,7 @@ export function Sidebar({
                         className={
                           'group relative flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
                           (isActive
-                            ? 'bg-secondary text-foreground font-semibold relative before:absolute before:left-0 before:top-2 before:bottom-2 before:w-1 before:bg-primary before:rounded-full'
+                            ? 'bg-secondary text-foreground font-semibold'
                             : clickable
                               ? 'cursor-pointer text-muted-foreground hover:text-foreground hover:bg-muted/50 font-medium'
                               : 'cursor-not-allowed text-muted-foreground/50')
