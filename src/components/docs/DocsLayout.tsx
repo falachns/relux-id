@@ -75,7 +75,7 @@ export function DocsLayout({
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       {/* Skip-to-content for keyboard / screen-reader users (WCAG 2.4.1) */}
       <a
         href="#main-content"
@@ -93,11 +93,11 @@ export function DocsLayout({
         onOpenCommandMenu={() => setCommandOpen(true)}
       />
 
-      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-[14rem_minmax(0,1fr)] xl:grid-cols-[14rem_minmax(0,1fr)_13rem]">
+      <div className="w-full px-4 sm:px-6 lg:px-8 flex-1 flex">
         {/* Desktop sidebar */}
         <aside
           aria-label={t.navAside}
-          className="sticky top-16 hidden h-[calc(100vh-4rem)] overflow-y-auto overscroll-contain border-r border-border pl-4 pr-3 pb-16 lg:block"
+          className="sticky top-16 hidden h-[calc(100vh-4rem)] w-64 shrink-0 overflow-y-auto overscroll-contain py-6 pr-4 border-r border-border lg:block"
         >
           <Sidebar active={active} onNavigate={navigate} query={query} />
         </aside>
@@ -132,10 +132,11 @@ export function DocsLayout({
           </div>
         )}
 
+        {/* Konten Utama */}
         <main
           id="main-content"
           aria-label={t.main}
-          className="min-w-0 flex-1 pt-8 pb-16 px-4 sm:px-8 flex flex-col justify-between transition-opacity duration-200 ease-out animate-in fade-in-50"
+          className="min-w-0 flex-1 py-8 px-6 lg:px-10 flex flex-col justify-between transition-opacity duration-200 ease-out animate-in fade-in-50"
           tabIndex={-1}
         >
           <div>
@@ -155,10 +156,10 @@ export function DocsLayout({
           </footer>
         </main>
 
-        {/* Table of Contents — desktop xl+ */}
+        {/* Table of Contents Kanan */}
         <aside
           aria-label={t.toc}
-          className="sticky top-20 hidden h-[calc(100vh-5rem)] overflow-y-auto overscroll-contain py-4 px-4 pr-2 xl:block"
+          className="sticky top-16 hidden h-[calc(100vh-4rem)] w-64 shrink-0 overflow-y-auto overscroll-contain py-8 pl-6 xl:block"
         >
           <TableOfContents activePage={active} />
         </aside>

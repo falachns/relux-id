@@ -12,8 +12,7 @@ function useToc(dep: unknown): [TocEntry[], string] {
   const observerRef = useRef<IntersectionObserver | null>(null)
 
   useEffect(() => {
-    // Clear stale entries immediately on page switch so the TOC doesn't show
-    // the previous page's headings while the new page animates in.
+    // Clear stale entries immediately on page switch
     setEntries([])
     setActiveId('')
     observerRef.current?.disconnect()
@@ -21,31 +20,19 @@ function useToc(dep: unknown): [TocEntry[], string] {
     let timer = 0
     let signature = ''
     const scan = () => {
-      // Selector: main section[id] > h2, and nested h3 inside sections
+      // Flat H2 only: main section[id] > h2
       const headings = Array.from(
-        document.querySelectorAll<HTMLElement>('main section[id] > h2, main section[id] h3'),
+        document.querySelectorAll<HTMLElement>('main section[id] > h2'),
       )
       const tocEntries: TocEntry[] = []
-      headings.forEach((h, idx) => {
-        const isH3 = h.tagName.toLowerCase() === 'h3'
-        let id = ''
-        if (isH3) {
-          if (h.id) {
-            id = h.id
-          } else {
-            const section = h.closest('section')
-            id = `${section?.id || 'sec'}-sub-${idx}`
-            h.id = id
-          }
-        } else {
-          id = h.closest('section')?.id || ''
-        }
+      headings.forEach((h) => {
+        const id = h.closest('section')?.id || h.id
         const text = h.textContent?.trim()
         if (id && text) {
           tocEntries.push({
             id,
             label: text,
-            level: isH3 ? 3 : 2,
+            level: 2,
           })
         }
       })
@@ -73,7 +60,7 @@ function useToc(dep: unknown): [TocEntry[], string] {
       observerRef.current?.disconnect()
       observerRef.current = obs
     }
-    // Rescan whenever page content changes (animation, async render), debounced.
+
     const schedule = () => {
       clearTimeout(timer)
       timer = window.setTimeout(scan, SCAN_DELAY)
@@ -101,22 +88,14 @@ export function TableOfContents({ activePage }: { activePage: unknown }) {
 
   return (
     <nav aria-label={t.toc} className="w-full">
-      <div className="mb-4 flex items-center gap-2 ps-3 text-xs font-bold uppercase tracking-wider text-foreground">
+      <div className="mb-3 text-xs font-bold uppercase tracking-wider text-muted-foreground">
         <span>{t.tocTitle}</span>
       </div>
-      <ul className="relative space-y-0.5 border-s border-border ps-0">
+      <ul className="space-y-1">
         {entries.map((entry) => {
           const isActive = entry.id === activeId
-          const isSub = entry.level === 3
           return (
-            <li key={entry.id} className="relative">
-              {/* Active vertical accent bar on the left edge */}
-              {isActive && (
-                <span
-                  className="absolute -start-px top-0.5 bottom-0.5 w-0.5 rounded-full bg-primary"
-                  aria-hidden="true"
-                />
-              )}
+            <li key={entry.id}>
               <a
                 href={`#${entry.id}`}
                 onClick={(e) => {
@@ -124,11 +103,10 @@ export function TableOfContents({ activePage }: { activePage: unknown }) {
                   document.getElementById(entry.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
                 }}
                 className={
-                  'block pe-2 py-1 leading-snug rounded-e-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ' +
-                  (isSub ? 'ps-6 text-xs ' : 'ps-3 text-xs ') +
+                  'block py-1.5 text-xs transition-colors rounded-md px-2.5 ' +
                   (isActive
-                    ? 'text-primary font-semibold border-l-2 border-primary bg-primary/5 pl-2.5 py-1'
-                    : 'text-muted-foreground hover:text-foreground font-medium text-xs hover:bg-muted/40')
+                    ? 'text-foreground font-semibold bg-muted/60'
+                    : 'text-muted-foreground hover:text-foreground font-medium hover:bg-muted/30')
                 }
               >
                 {entry.label}

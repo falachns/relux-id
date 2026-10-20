@@ -44,8 +44,8 @@ export function Header({
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full h-16 border-b border-border bg-background/95 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 w-full h-16 border-b border-border bg-background/95 backdrop-blur-md">
+      <div className="w-full h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <button
             type="button"
