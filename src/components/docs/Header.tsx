@@ -57,7 +57,7 @@ export function Header({
         </div>
 
         {/* Right: Make Kit KAI Search Bar, Language Switcher & Quick Links */}
-        <div className="shrink-0 flex items-center gap-3">
+        <div className="shrink-0 flex items-center gap-4">
           {/* 1. Search Bar */}
           <button
             type="button"
