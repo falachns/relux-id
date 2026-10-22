@@ -1,5 +1,6 @@
 import { useRef, type KeyboardEvent } from 'react'
 import { useLang, type Lang } from '../../lib/i18n'
+import { RelUXLogo } from '../brand/RelUXLogo'
 
 const LANGS: { value: Lang; short: string; name: string }[] = [
   { value: 'id', short: 'ID', name: 'Bahasa Indonesia' },
@@ -51,26 +52,27 @@ export function Header({
             type="button"
             onClick={onToggleMenu}
             aria-label={t.openMenu}
-            className="rounded-md p-2 text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
+            className="rounded-md p-2 text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:hidden"
           >
             <svg viewBox="0 0 20 20" className="size-5" aria-hidden="true">
               <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
             </svg>
           </button>
 
-          <button
-            type="button"
-            onClick={onHome}
+          <a
+            href="#/introduction"
+            onClick={(e) => {
+              e.preventDefault()
+              onHome()
+            }}
             aria-label={t.home}
-            className="flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-left"
+            className="flex items-center gap-2.5 shrink-0 rounded-md p-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
-            <div className="flex items-center gap-2">
-              <span className="text-xl font-bold tracking-tight text-foreground">RelUX</span>
-              <span className="rounded-md border border-border bg-muted/60 px-2 py-0.5 text-[11px] font-semibold text-muted-foreground">
-                v1.0.0
-              </span>
-            </div>
-          </button>
+            <RelUXLogo className="h-6 w-auto text-foreground" height={24} />
+            <span className="rounded-md border border-border bg-muted/60 px-2 py-0.5 text-[11px] font-semibold text-muted-foreground font-mono">
+              v1.0.0
+            </span>
+          </a>
         </div>
 
         <div className="shrink-0 flex items-center gap-2 sm:gap-3">
@@ -93,7 +95,7 @@ export function Header({
               onChange={(e) => onQuery(e.target.value)}
               placeholder={t.searchPlaceholder}
               aria-label={t.search}
-              className="w-full rounded-lg border border-border bg-secondary py-2 ps-9 pe-12 text-sm text-secondary-foreground placeholder:text-muted-foreground transition-[border-color,box-shadow] hover:border-border/80 focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30 cursor-pointer"
+              className="w-full rounded-lg border border-border bg-secondary py-2 ps-9 pe-12 text-sm text-secondary-foreground placeholder:text-muted-foreground hover:border-border/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-transparent transition-all cursor-pointer"
             />
             <kbd className="pointer-events-none absolute end-2.5 top-1/2 -translate-y-1/2 rounded border border-border bg-background px-1.5 py-0.5 font-mono text-xs font-semibold leading-none text-muted-foreground shadow-xs">
               ⌘K
@@ -124,7 +126,7 @@ export function Header({
                     handleLanguageKey(event, LANGS.indexOf(l))
                   }
                   className={
-                    'rounded-lg px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
+                    'rounded-lg px-2.5 py-1 text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 transition-all ' +
                     (on ? 'bg-background text-foreground shadow-xs border border-border' : 'text-muted-foreground hover:text-foreground')
                   }
                 >
@@ -139,9 +141,9 @@ export function Header({
               type="button"
               onClick={onManage}
               title="Area Manajemen & Change Request (PRD §5.11 / Dev Mode)"
-              className="hidden sm:inline-flex items-center gap-1.5 rounded-lg border border-border bg-secondary px-3 py-1.5 text-xs font-semibold text-secondary-foreground hover:bg-muted hover:text-foreground hover:border-border/80 transition-colors shadow-2xs"
+              className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-3 py-1.5 text-xs font-semibold text-secondary-foreground shadow-2xs hover:bg-muted hover:border-border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
-              <span className="size-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
+              <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
               <span>Manage</span>
             </button>
           )}
