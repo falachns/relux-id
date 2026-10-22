@@ -54,7 +54,7 @@ export function Sidebar({
                 viewBox="0 0 20 20"
                 aria-hidden="true"
                 className={
-                  'h-3.5 w-3.5 text-slate-500 stroke-[2.2] transition-transform ' +
+                  'h-4 w-4 text-slate-700 stroke-[2.2] transition-transform ' +
                   (isCollapsed ? '' : 'rotate-180')
                 }
               >
