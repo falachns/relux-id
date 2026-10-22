@@ -61,16 +61,16 @@ export function Header({
           <button
             type="button"
             onClick={onOpenCommandMenu}
-            className="h-9 w-56 sm:w-64 md:w-72 flex items-center justify-between px-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50/80 dark:bg-slate-900/60 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs transition-all cursor-pointer shadow-2xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="h-9 w-56 sm:w-64 md:w-72 flex items-center justify-between px-3 rounded-lg border border-slate-300 bg-slate-100/70 hover:bg-slate-200/60 text-xs text-slate-600 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             aria-label={t.search}
           >
             <div className="flex items-center gap-2 min-w-0">
               <svg className="h-4 w-4 text-slate-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-              <span className="text-slate-600 dark:text-slate-400 font-normal truncate">{t.searchPlaceholder}</span>
+              <span className="truncate text-slate-600 font-normal">{t.searchPlaceholder}</span>
             </div>
-            <kbd className="inline-flex items-center gap-0.5 rounded border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-1.5 py-0.5 text-[10px] font-mono font-medium text-slate-600 dark:text-slate-300 shadow-2xs">
+            <kbd className="inline-flex items-center gap-0.5 rounded border border-slate-300 bg-white px-1.5 py-0.5 text-[10px] font-mono font-medium text-slate-600 shadow-2xs">
               ⌘K
             </kbd>
           </button>
@@ -78,7 +78,7 @@ export function Header({
           <div
             role="radiogroup"
             aria-label={t.language}
-            className="inline-flex h-9 items-center rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800/80 p-0.5 text-xs"
+            className="inline-flex h-9 items-center rounded-lg border border-slate-200 bg-slate-100 p-0.5 text-xs"
           >
             <button
               type="button"
@@ -87,8 +87,8 @@ export function Header({
               onClick={() => setLang('id')}
               className={`px-2.5 py-1 rounded-[6px] text-xs transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
                 lang === 'id'
-                  ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-semibold shadow-xs border border-slate-200/60 dark:border-slate-700'
-                  : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 font-medium'
+                  ? 'bg-white text-slate-900 font-semibold shadow-xs border border-slate-200/60'
+                  : 'text-slate-500 hover:text-slate-900 font-medium'
               }`}
             >
               ID
@@ -100,8 +100,8 @@ export function Header({
               onClick={() => setLang('en')}
               className={`px-2.5 py-1 rounded-[6px] text-xs transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
                 lang === 'en'
-                  ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-semibold shadow-xs border border-slate-200/60 dark:border-slate-700'
-                  : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 font-medium'
+                  ? 'bg-white text-slate-900 font-semibold shadow-xs border border-slate-200/60'
+                  : 'text-slate-500 hover:text-slate-900 font-medium'
               }`}
             >
               EN
