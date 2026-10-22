@@ -97,7 +97,7 @@ export function DocsLayout({
         {/* Desktop sidebar */}
         <aside
           aria-label={t.navAside}
-          className="sticky top-16 hidden h-[calc(100vh-4rem)] w-64 shrink-0 overflow-y-auto overscroll-contain py-6 pr-4 border-r border-border lg:block"
+          className="sticky top-16 hidden h-[calc(100vh-4rem)] w-60 shrink-0 overflow-y-auto overscroll-contain px-3 py-4 border-r border-border lg:block"
         >
           <Sidebar active={active} onNavigate={navigate} query={query} />
         </aside>
@@ -118,12 +118,12 @@ export function DocsLayout({
               aria-label={t.navAside}
               tabIndex={-1}
               onKeyDown={handleDrawerKey}
-              className="absolute left-0 top-0 h-full w-72 overflow-y-auto border-r border-border bg-background px-4 shadow-xl"
+              className="absolute left-0 top-0 h-full w-64 overflow-y-auto border-r border-border bg-background px-3 py-4 shadow-xl"
             >
               <button
                 type="button"
                 onClick={() => setMenuOpen(false)}
-                className="relux-focus mt-3 rounded-md px-3 py-2 text-sm font-semibold text-primary"
+                className="relux-focus mb-2 rounded-md px-2.5 py-1.5 text-xs font-semibold text-primary"
               >
                 {t.closeMenu}
               </button>
@@ -136,7 +136,7 @@ export function DocsLayout({
         <main
           id="main-content"
           aria-label={t.main}
-          className="min-w-0 flex-1 py-8 px-6 lg:px-10 flex flex-col justify-between transition-opacity duration-200 ease-out animate-in fade-in-50"
+          className="max-w-4xl py-8 px-6 lg:px-10 min-w-0 flex-1 flex flex-col justify-between transition-opacity duration-200 ease-out animate-in fade-in-50"
           tabIndex={-1}
         >
           <div>
@@ -159,7 +159,7 @@ export function DocsLayout({
         {/* Table of Contents Kanan */}
         <aside
           aria-label={t.toc}
-          className="sticky top-16 hidden h-[calc(100vh-4rem)] w-64 shrink-0 overflow-y-auto overscroll-contain py-8 pl-6 xl:block"
+          className="sticky top-16 hidden h-[calc(100vh-4rem)] w-56 shrink-0 overflow-y-auto overscroll-contain py-6 pr-4 pl-4 text-xs xl:block"
         >
           <TableOfContents activePage={active} />
         </aside>

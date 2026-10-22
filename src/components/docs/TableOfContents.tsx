@@ -88,10 +88,10 @@ export function TableOfContents({ activePage }: { activePage: unknown }) {
 
   return (
     <nav aria-label={t.toc} className="w-full">
-      <div className="mb-3 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+      <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mb-3">
         <span>{t.tocTitle}</span>
       </div>
-      <ul className="space-y-1">
+      <ul className="space-y-0.5">
         {entries.map((entry) => {
           const isActive = entry.id === activeId
           return (
@@ -103,10 +103,9 @@ export function TableOfContents({ activePage }: { activePage: unknown }) {
                   document.getElementById(entry.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
                 }}
                 className={
-                  'block py-1.5 text-xs transition-colors rounded-md px-2.5 ' +
-                  (isActive
-                    ? 'text-foreground font-semibold bg-muted/60'
-                    : 'text-muted-foreground hover:text-foreground font-medium hover:bg-muted/30')
+                  isActive
+                    ? 'block py-1 text-[13px] text-primary font-semibold transition-colors leading-snug relative pl-2.5 before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-primary'
+                    : 'block py-1 text-[13px] text-muted-foreground hover:text-foreground transition-colors leading-snug'
                 }
               >
                 {entry.label}

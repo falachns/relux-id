@@ -42,7 +42,7 @@ const COPY = {
   id: {
     title: 'Pengenalan RelUX',
     category: 'Memulai',
-    description: 'RelUX adalah design system internal PT Kereta Api Indonesia — sumber kebenaran tunggal yang menjembatani desain di Figma dengan implementasi aplikasi. Dibangun di atas fondasi UntitledUI dan diselaraskan dengan identitas visual KAI.',
+    description: 'RelUX adalah design system resmi PT Kereta Api Indonesia (Persero) — sumber kebenaran tunggal yang menjembatani design token Figma Make Kit KAI v1 dengan implementasi kode multi-framework (React, Blade, Angular). Dirancang untuk menjamin konsistensi antarmuka, kepatuhan aksesibilitas WCAG 2.1 AA, dan kecepatan developer di seluruh ekosistem digital KAI.',
     coverageTitle: 'Design System Coverage & Paritas Multi-Framework',
     coverageDesc: 'Metrik pelacakan real-time tingkat kepatuhan implementasi kode terhadap kit desain Figma Make Kit KAI v1 dan kesetaraan fitur pada 3 stack frontend resmi (Blade, React, Angular).',
     coverageRateLabel: 'Tingkat Cakupan Figma (Coverage Rate)',
@@ -123,7 +123,7 @@ const COPY = {
   en: {
     title: 'RelUX Introduction',
     category: 'Getting Started',
-    description: 'RelUX is the internal design system of PT Kereta Api Indonesia — the authoritative single source of truth bridging Figma design tokens with code implementation. Built upon UntitledUI foundations and harmonized with KAI’s brand visual identity.',
+    description: "RelUX is the official design system of PT Kereta Api Indonesia (Persero) — an authoritative single source of truth bridging Figma Make Kit KAI v1 design tokens with multi-framework code implementations (React, Blade, Angular). Engineered to guarantee interface consistency, WCAG 2.1 AA accessibility compliance, and developer velocity across KAI's digital ecosystem.",
     coverageTitle: 'Design System Coverage & Multi-Framework Parity',
     coverageDesc: 'Real-time metrics tracking implementation adherence against Figma Make Kit KAI v1 and full feature equivalence across 3 official frontend stacks (Blade, React, Angular).',
     coverageRateLabel: 'Figma Component Coverage Rate',
@@ -238,7 +238,7 @@ export function Introduction({
   const [activeCoverageTab, setActiveCoverageTab] = useState<'ready' | 'planned'>('ready')
 
   return (
-    <article className="mx-auto max-w-3xl">
+    <article className="mx-auto max-w-4xl">
       <PageHeader
         category={t.category}
         title={t.title}
@@ -250,7 +250,7 @@ export function Introduction({
             href="https://www.figma.com/design/Lbqu1BYMXUvO0h9p04G8rz/Design-System-KAI-v.1?m=auto&t=cYWauGA96ZUpgiwM-6"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-border bg-card text-foreground text-xs font-semibold hover:bg-muted hover:border-border transition-colors shadow-2xs"
+            className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground shadow-2xs hover:bg-muted transition-colors"
           >
             <Figma className="size-3.5 text-primary" aria-hidden="true" />
             <span>Figma RelUX</span>
@@ -260,7 +260,7 @@ export function Introduction({
             href="https://github.com/falachns/relux-id"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-border bg-card text-foreground text-xs font-semibold hover:bg-muted hover:border-border transition-colors shadow-2xs"
+            className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground shadow-2xs hover:bg-muted transition-colors"
           >
             <Github className="size-3.5 text-foreground" aria-hidden="true" />
             <span>Repo Github</span>

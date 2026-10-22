@@ -28,9 +28,9 @@ export function Sidebar({
   const searching = query.trim().length > 0
 
   return (
-    <nav className="flex flex-col gap-6 py-6 pr-3" aria-label={t.nav}>
+    <nav className="flex flex-col" aria-label={t.nav}>
       {groups.length === 0 && (
-        <p className="px-3 text-sm text-muted-foreground">
+        <p className="px-2.5 py-2 text-xs text-muted-foreground">
           {t.noResults(query)}
         </p>
       )}
@@ -47,14 +47,14 @@ export function Sidebar({
                 }))
               }
               aria-expanded={!isCollapsed}
-              className="mb-1 flex w-full items-center justify-between px-3 py-1 text-xs font-bold uppercase tracking-wider text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded-md"
+              className="flex w-full items-center justify-between text-[11px] font-bold uppercase tracking-wider text-muted-foreground px-2.5 pt-4 pb-1.5 first:pt-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded-md"
             >
               <span>{label(group)}</span>
               <svg
                 viewBox="0 0 20 20"
                 aria-hidden="true"
                 className={
-                  'size-4 text-muted-foreground/70 transition-transform ' +
+                  'size-3.5 text-muted-foreground/70 transition-transform ' +
                   (isCollapsed ? '' : 'rotate-180')
                 }
               >
@@ -70,7 +70,7 @@ export function Sidebar({
             </button>
 
             {!isCollapsed && (
-              <ul className="space-y-0.5 pt-0.5">
+              <ul className="space-y-0.5">
                 {group.items.map((item) => {
                   const isActive = item.section === active
                   const clickable = Boolean(item.section)
@@ -82,23 +82,17 @@ export function Sidebar({
                         onClick={() => item.section && onNavigate(item.section)}
                         aria-current={isActive ? 'page' : undefined}
                         className={
-                          'group relative flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
+                          'group relative flex w-full items-center justify-between text-[13px] px-2.5 py-1.5 rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
                           (isActive
-                            ? 'bg-secondary text-foreground font-semibold'
+                            ? 'bg-muted text-foreground font-semibold rounded-md'
                             : clickable
-                              ? 'cursor-pointer text-muted-foreground hover:text-foreground hover:bg-muted/50 font-medium'
+                              ? 'cursor-pointer text-muted-foreground hover:text-foreground hover:bg-muted/60'
                               : 'cursor-not-allowed text-muted-foreground/50')
                         }
                       >
-                        {isActive && (
-                          <span
-                            className="sr-only"
-                            aria-hidden="true"
-                          />
-                        )}
                         <span className="truncate">{label(item)}</span>
                         {item.soon && (
-                          <span className="rounded-md border border-border bg-secondary px-1.5 py-0.5 font-mono text-xs leading-none uppercase tracking-wider text-muted-foreground font-semibold">
+                          <span className="rounded-md border border-border bg-secondary px-1.5 py-0.5 font-mono text-[10px] leading-none uppercase tracking-wider text-muted-foreground font-semibold">
                             {t.soon}
                           </span>
                         )}
