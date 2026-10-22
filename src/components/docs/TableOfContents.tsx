@@ -81,34 +81,34 @@ function useToc(dep: unknown): [TocEntry[], string] {
 }
 
 export function TableOfContents({ activePage }: { activePage: unknown }) {
-  const { t, lang } = useLang()
+  const { lang } = useLang()
   const [entries, activeId] = useToc(`${activePage}-${lang}`)
 
   if (entries.length === 0) return null
 
   return (
-    <nav aria-label={t.toc} className="w-full">
-      <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mb-3">
-        <span>{t.tocTitle}</span>
-      </div>
-      <ul className="space-y-0.5">
-        {entries.map((entry) => {
-          const isActive = entry.id === activeId
+    <nav aria-label={lang === 'id' ? 'Di halaman ini' : 'On this page'} className="space-y-3">
+      <p className="text-sm font-semibold text-foreground tracking-tight">
+        {lang === 'id' ? 'Di halaman ini' : 'On this page'}
+      </p>
+      <ul className="relative border-l border-border text-sm font-normal">
+        {entries.map((heading) => {
+          const isActive = activeId === heading.id
           return (
-            <li key={entry.id}>
+            <li key={heading.id}>
               <a
-                href={`#${entry.id}`}
+                href={`#${heading.id}`}
                 onClick={(e) => {
                   e.preventDefault()
-                  document.getElementById(entry.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  document.getElementById(heading.id)?.scrollIntoView({ behavior: 'smooth' })
                 }}
-                className={
+                className={`block py-1.5 pl-4 -ml-px text-sm transition-colors ${
                   isActive
-                    ? 'block py-1 text-[13px] text-primary font-semibold transition-colors leading-snug relative pl-2.5 before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-primary'
-                    : 'block py-1 text-[13px] text-muted-foreground hover:text-foreground transition-colors leading-snug'
-                }
+                    ? 'border-l-2 border-primary text-primary font-medium'
+                    : 'text-muted-foreground hover:text-foreground hover:border-l-2 hover:border-border'
+                }`}
               >
-                {entry.label}
+                {heading.label}
               </a>
             </li>
           )

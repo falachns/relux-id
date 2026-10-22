@@ -50,19 +50,19 @@ export function Header({
               textColor="#0D1B3E"
               className="h-[26px] w-auto"
             />
-            <span className="rounded-md border border-border bg-muted/60 px-2 py-0.5 text-[11px] font-semibold text-muted-foreground font-mono">
+            <span className="hidden sm:inline-flex rounded-md border border-border bg-muted/60 px-2 py-0.5 text-[11px] font-semibold text-muted-foreground font-mono">
               v1.0.0
             </span>
           </a>
         </div>
 
         {/* Right: Make Kit KAI Search Bar, Language Switcher & Quick Links */}
-        <div className="shrink-0 flex items-center gap-4">
+        <div className="shrink-0 flex items-center gap-2.5 sm:gap-4">
           {/* 1. Search Bar */}
           <button
             type="button"
             onClick={onOpenCommandMenu}
-            className="h-9 w-48 sm:w-56 md:w-60 flex items-center justify-between px-3 rounded-md border border-border/70 bg-background hover:bg-muted/60 hover:border-border text-xs transition-all cursor-pointer shadow-2xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="h-9 w-36 xs:w-44 sm:w-56 md:w-60 flex items-center justify-between px-2.5 sm:px-3 rounded-md border border-border/70 bg-background hover:bg-muted/60 hover:border-border text-xs transition-all cursor-pointer shadow-2xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             aria-label={t.search}
           >
             <div className="flex items-center gap-2 min-w-0">
@@ -71,7 +71,7 @@ export function Header({
               </svg>
               <span className="truncate text-foreground/70 font-normal">{t.searchPlaceholder}</span>
             </div>
-            <kbd className="inline-flex items-center gap-0.5 rounded bg-muted/80 px-1.5 py-0.5 text-[10px] font-mono font-medium text-foreground/70">
+            <kbd className="hidden sm:inline-flex items-center gap-0.5 rounded bg-muted/80 px-1.5 py-0.5 text-[10px] font-mono font-medium text-foreground/70">
               ⌘K
             </kbd>
           </button>
