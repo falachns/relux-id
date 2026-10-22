@@ -31,6 +31,7 @@ export type SectionId =
   | 'example-settings'
   | 'theming'
   | 'manage'
+  | 'not-found'
 
 export type NavItem = {
   id: string

@@ -86,7 +86,7 @@ export function Sidebar({
                           (isActive
                             ? 'font-semibold text-primary bg-primary/10'
                             : clickable
-                              ? 'font-normal text-muted-foreground hover:text-foreground hover:bg-muted/60 cursor-pointer'
+                              ? 'font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 cursor-pointer'
                               : 'font-normal text-muted-foreground/50 cursor-not-allowed')
                         }
                       >
