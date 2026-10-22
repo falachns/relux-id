@@ -18,8 +18,8 @@ type Props = {
 export function RelUXLogo({
   variant = "full",
   height = 32,
-  iconColor = "var(--colors\/kai\/esa-primary\/700)",
-  textColor = "var(--foreground)",
+  iconColor = "#083e7b",
+  textColor = "var(--foreground, #0D1B3E)",
   title = "RelUX",
   ...rest
 }: Props) {

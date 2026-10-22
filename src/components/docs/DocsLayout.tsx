@@ -97,7 +97,7 @@ export function DocsLayout({
         {/* Desktop sidebar */}
         <aside
           aria-label={t.navAside}
-          className="sticky top-16 hidden h-[calc(100vh-4rem)] w-60 shrink-0 overflow-y-auto overscroll-contain pl-0 pr-4 py-6 border-r border-border lg:block sidebar-scroll"
+          className="sticky top-16 hidden h-[calc(100vh-4rem)] w-60 shrink-0 overflow-y-auto overscroll-contain pl-1 pr-4 py-6 border-r border-border lg:block sidebar-scroll"
         >
           <Sidebar active={active} onNavigate={navigate} query={query} />
         </aside>

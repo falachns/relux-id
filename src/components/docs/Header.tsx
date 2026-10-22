@@ -68,7 +68,13 @@ export function Header({
             aria-label={t.home}
             className="flex items-center gap-2.5 shrink-0 rounded-md p-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
-            <RelUXLogo className="h-6 w-auto text-foreground" height={24} />
+            <RelUXLogo
+              variant="full"
+              height={26}
+              iconColor="#083e7b"
+              textColor="#0D1B3E"
+              className="h-[26px] w-auto"
+            />
             <span className="rounded-md border border-border bg-muted/60 px-2 py-0.5 text-[11px] font-semibold text-muted-foreground font-mono">
               v1.0.0
             </span>
@@ -95,7 +101,7 @@ export function Header({
               onChange={(e) => onQuery(e.target.value)}
               placeholder={t.searchPlaceholder}
               aria-label={t.search}
-              className="w-full rounded-lg border border-border bg-secondary py-2 ps-9 pe-12 text-sm text-secondary-foreground placeholder:text-muted-foreground hover:border-border/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-transparent transition-all cursor-pointer"
+              className="w-full rounded-lg border border-border bg-secondary py-2 ps-9 pe-12 text-sm text-secondary-foreground placeholder:text-muted-foreground hover:border-border/80 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none transition-all cursor-pointer"
             />
             <kbd className="pointer-events-none absolute end-2.5 top-1/2 -translate-y-1/2 rounded border border-border bg-background px-1.5 py-0.5 font-mono text-xs font-semibold leading-none text-muted-foreground shadow-xs">
               ⌘K
@@ -126,7 +132,7 @@ export function Header({
                     handleLanguageKey(event, LANGS.indexOf(l))
                   }
                   className={
-                    'rounded-lg px-2.5 py-1 text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 transition-all ' +
+                    'rounded-lg px-2.5 py-1 text-xs font-semibold focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none transition-all ' +
                     (on ? 'bg-background text-foreground shadow-xs border border-border' : 'text-muted-foreground hover:text-foreground')
                   }
                 >
@@ -140,10 +146,9 @@ export function Header({
             <button
               type="button"
               onClick={onManage}
-              title="Area Manajemen & Change Request (PRD §5.11 / Dev Mode)"
-              className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-3 py-1.5 text-xs font-semibold text-secondary-foreground shadow-2xs hover:bg-muted hover:border-border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              title="Status Paritas & Tata Kelola Sistem (PRD §5)"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border bg-card text-xs font-semibold text-foreground hover:bg-muted transition-colors shadow-2xs focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary focus-visible:outline-none"
             >
-              <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
               <span>Manage</span>
             </button>
           )}

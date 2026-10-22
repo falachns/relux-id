@@ -47,7 +47,7 @@ export function Sidebar({
                 }))
               }
               aria-expanded={!isCollapsed}
-              className="flex items-center justify-between w-full py-1 px-3 text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:rounded-md"
+              className="flex items-center justify-between w-full py-1 px-3 text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-slate-900 transition-colors focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary focus-visible:outline-none focus-visible:rounded-md"
             >
               <span>{label(group)}</span>
               <svg
@@ -82,7 +82,7 @@ export function Sidebar({
                         onClick={() => item.section && onNavigate(item.section)}
                         aria-current={isActive ? 'page' : undefined}
                         className={
-                          'flex items-center justify-between w-full px-3 py-2 text-sm rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ' +
+                          'flex items-center justify-between w-full px-3 py-2 text-sm rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary focus-visible:outline-none ' +
                           (isActive
                             ? 'font-semibold text-slate-900 bg-[#EBF2FE]'
                             : clickable
