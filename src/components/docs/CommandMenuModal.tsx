@@ -198,32 +198,34 @@ export function CommandMenuModal({
         onKeyDown={handleKeyDown}
       >
         {/* Search Input Bar */}
-        <div className="flex items-center gap-3 px-4 py-3 border-b border-border bg-muted/20">
+        <div className="relative flex items-center gap-3 px-4 py-3 border-b border-border bg-muted/20">
           <Search className="size-5 text-muted-foreground shrink-0" aria-hidden="true" />
           <input
             ref={inputRef}
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder={isEn ? 'Search docs, components, tokens, or examples... (↑↓ to move, ↵ to select)' : 'Cari dokumentasi, komponen, token, atau contoh... (↑↓ untuk navigasi)'}
-            className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none"
+            placeholder={lang === 'id' ? 'Cari dokumentasi atau komponen...' : 'Search documentation or components...'}
+            className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none pr-14"
           />
-          {query && (
-            <button
-              type="button"
-              onClick={() => setQuery('')}
-              className="rounded p-1 text-muted-foreground hover:text-foreground"
-            >
-              <X className="size-4" />
-            </button>
-          )}
-          <kbd className="hidden sm:inline-flex items-center gap-1 rounded bg-muted px-2 py-0.5 text-xs leading-none font-mono text-muted-foreground border border-border">
-            ESC
-          </kbd>
+          <div className="absolute right-4 flex items-center gap-1.5">
+            {query && (
+              <button
+                type="button"
+                onClick={() => setQuery('')}
+                className="rounded p-1 text-muted-foreground hover:text-foreground"
+              >
+                <X className="size-4" />
+              </button>
+            )}
+            <kbd className="hidden sm:inline-flex items-center gap-1 rounded bg-muted px-2 py-0.5 text-xs leading-none font-mono text-muted-foreground border border-border">
+              ESC
+            </kbd>
+          </div>
         </div>
 
         {/* Results List */}
-        <div ref={listRef} className="max-h-96 overflow-y-auto p-2 space-y-1">
+        <div ref={listRef} className="max-h-[380px] overflow-y-auto p-2 space-y-1">
           {filtered.length === 0 ? (
             <div className="p-8 text-center text-xs text-muted-foreground">
               {isEn ? `No results found for "${query}".` : `Tidak ada hasil yang sesuai dengan "${query}".`}
@@ -242,10 +244,10 @@ export function CommandMenuModal({
                     onClose()
                   }}
                   onMouseEnter={() => setSelectedIndex(index)}
-                  className={`flex items-start justify-between gap-3 p-2.5 rounded-lg cursor-pointer transition-colors ${
+                  className={`flex items-start justify-between gap-3 p-3 rounded-lg cursor-pointer transition-colors ${
                     isSelected
-                      ? 'bg-primary/10 text-primary border border-primary/20'
-                      : 'hover:bg-muted/60 text-foreground border border-transparent'
+                      ? 'bg-primary/10 border border-primary/20 text-foreground'
+                      : 'hover:bg-muted/60 text-muted-foreground hover:text-foreground border border-transparent'
                   }`}
                 >
                   <div className="flex items-start gap-3 overflow-hidden">
@@ -272,7 +274,7 @@ export function CommandMenuModal({
         </div>
 
         {/* Keyboard Footer */}
-        <div className="flex items-center justify-between px-4 py-2 text-xs text-muted-foreground border-t border-border bg-muted/30">
+        <div className="border-t border-border bg-muted/30 px-4 py-2.5 text-xs text-muted-foreground flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="flex items-center gap-1">
               <kbd className="rounded bg-muted px-1.5 py-0.5 font-mono border border-border">↑</kbd>
