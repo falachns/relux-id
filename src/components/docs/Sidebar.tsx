@@ -47,14 +47,14 @@ export function Sidebar({
                 }))
               }
               aria-expanded={!isCollapsed}
-              className="flex items-center justify-between w-full py-1 px-3 text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-slate-900 transition-colors focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary focus-visible:outline-none focus-visible:rounded-md"
+              className="flex items-center justify-between w-full py-1 px-3 text-xs font-bold uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary focus-visible:outline-none rounded-md"
             >
               <span>{label(group)}</span>
               <svg
                 viewBox="0 0 20 20"
                 aria-hidden="true"
                 className={
-                  'h-4 w-4 text-slate-700 stroke-[2.2] transition-transform ' +
+                  'h-4 w-4 text-muted-foreground stroke-[2.2] transition-transform ' +
                   (isCollapsed ? '' : 'rotate-180')
                 }
               >
@@ -82,12 +82,12 @@ export function Sidebar({
                         onClick={() => item.section && onNavigate(item.section)}
                         aria-current={isActive ? 'page' : undefined}
                         className={
-                          'flex items-center justify-between w-full px-3 py-2 text-sm rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary focus-visible:outline-none ' +
+                          'flex items-center justify-between w-full px-3.5 py-2 text-sm rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary focus-visible:outline-none ' +
                           (isActive
-                            ? 'font-semibold text-slate-900 bg-[#EBF2FE]'
+                            ? 'font-semibold text-primary bg-primary/10'
                             : clickable
-                              ? 'font-normal text-slate-600 hover:text-slate-900 hover:bg-slate-100/70 cursor-pointer'
-                              : 'font-normal text-slate-400 cursor-not-allowed')
+                              ? 'font-normal text-muted-foreground hover:text-foreground hover:bg-muted/60 cursor-pointer'
+                              : 'font-normal text-muted-foreground/50 cursor-not-allowed')
                         }
                       >
                         <span className="truncate">{label(item)}</span>

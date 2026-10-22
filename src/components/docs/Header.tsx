@@ -61,16 +61,16 @@ export function Header({
           <button
             type="button"
             onClick={onOpenCommandMenu}
-            className="h-9 w-56 sm:w-64 md:w-72 flex items-center justify-between px-3 rounded-lg border border-slate-300 bg-slate-100/70 hover:bg-slate-200/60 text-xs text-slate-600 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="h-9 w-56 sm:w-64 md:w-72 flex items-center justify-between px-3 rounded-md border border-input bg-muted/40 hover:bg-muted/70 text-xs text-muted-foreground transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             aria-label={t.search}
           >
             <div className="flex items-center gap-2 min-w-0">
-              <svg className="h-4 w-4 text-slate-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-4 w-4 text-muted-foreground shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-              <span className="truncate text-slate-600 font-normal">{t.searchPlaceholder}</span>
+              <span className="truncate font-normal">{t.searchPlaceholder}</span>
             </div>
-            <kbd className="inline-flex items-center gap-0.5 rounded border border-slate-300 bg-white px-1.5 py-0.5 text-[10px] font-mono font-medium text-slate-600 shadow-2xs">
+            <kbd className="inline-flex items-center gap-0.5 rounded border border-border bg-background px-1.5 py-0.5 text-[10px] font-mono font-medium text-muted-foreground shadow-2xs">
               ⌘K
             </kbd>
           </button>
@@ -78,17 +78,17 @@ export function Header({
           <div
             role="radiogroup"
             aria-label={t.language}
-            className="inline-flex h-9 items-center rounded-lg border border-slate-200 bg-slate-100 p-0.5 text-xs"
+            className="inline-flex h-9 items-center rounded-md border border-input bg-muted/40 p-0.5 text-xs"
           >
             <button
               type="button"
               role="radio"
               aria-checked={lang === 'id'}
               onClick={() => setLang('id')}
-              className={`px-2.5 py-1 rounded-[6px] text-xs transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
+              className={`px-3 py-1 rounded-[4px] text-xs font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
                 lang === 'id'
-                  ? 'bg-white text-slate-900 font-semibold shadow-xs border border-slate-200/60'
-                  : 'text-slate-500 hover:text-slate-900 font-medium'
+                  ? 'bg-background text-foreground shadow-2xs border border-border/50'
+                  : 'text-muted-foreground hover:text-foreground'
               }`}
             >
               ID
@@ -98,10 +98,10 @@ export function Header({
               role="radio"
               aria-checked={lang === 'en'}
               onClick={() => setLang('en')}
-              className={`px-2.5 py-1 rounded-[6px] text-xs transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
+              className={`px-3 py-1 rounded-[4px] text-xs font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
                 lang === 'en'
-                  ? 'bg-white text-slate-900 font-semibold shadow-xs border border-slate-200/60'
-                  : 'text-slate-500 hover:text-slate-900 font-medium'
+                  ? 'bg-background text-foreground shadow-2xs border border-border/50'
+                  : 'text-muted-foreground hover:text-foreground'
               }`}
             >
               EN
