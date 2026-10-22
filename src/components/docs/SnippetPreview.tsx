@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import componentsCss from '../../styles/components.css?raw'
-import vendorCss from '../../../vendor/design-system-kai-v1/dist/style.css?raw'
+import vendorCss from '../../styles/components.css?raw'
+import kitAdapterCss from '../../styles/kit-adapter.css?raw'
 import { Grid, Monitor, Moon, RotateCw, Smartphone, Sun, Tablet } from 'lucide-react'
 
 export type SnippetPreviewProps = {
@@ -45,11 +46,11 @@ export function SnippetPreview({
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    /* Vendor Make Kit v1 Tokens */
-    ${vendorCss}
+    /* RelUX Kit Adapter & Fallback Styles */
+    ${kitAdapterCss}
 
     /* RelUX Components System */
-    ${componentsCss}
+    ${vendorCss}
 
     /* Custom Example CSS */
     ${cleanedCustomCss}
@@ -108,7 +109,7 @@ export function SnippetPreview({
 
   return (
     <div className="relative overflow-hidden rounded-xl border border-border bg-card shadow-xs">
-      {/* Untitled UI-inspired control toolbar */}
+      {/* RelUX control toolbar */}
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border bg-muted/40 px-3.5 py-2 text-xs font-medium text-muted-foreground">
         <div className="flex items-center gap-3">
           <span className="font-mono text-xs font-semibold text-foreground/80">
