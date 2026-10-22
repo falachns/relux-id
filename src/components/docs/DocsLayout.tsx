@@ -97,7 +97,7 @@ export function DocsLayout({
         {/* Desktop sidebar */}
         <aside
           aria-label={t.navAside}
-          className="sticky top-16 hidden h-[calc(100vh-4rem)] w-64 shrink-0 overflow-y-auto overscroll-contain px-4 py-6 border-r border-border lg:block"
+          className="sticky top-16 hidden h-[calc(100vh-4rem)] w-64 shrink-0 overflow-y-auto overscroll-contain pl-0 pr-4 py-6 border-r border-border lg:block sidebar-scroll"
         >
           <Sidebar active={active} onNavigate={navigate} query={query} />
         </aside>
@@ -118,7 +118,7 @@ export function DocsLayout({
               aria-label={t.navAside}
               tabIndex={-1}
               onKeyDown={handleDrawerKey}
-              className="absolute left-0 top-0 h-full w-72 overflow-y-auto border-r border-border bg-background px-4 py-6 shadow-xl"
+              className="absolute left-0 top-0 h-full w-72 overflow-y-auto border-r border-border bg-background px-4 py-6 shadow-xl sidebar-scroll"
             >
               <button
                 type="button"

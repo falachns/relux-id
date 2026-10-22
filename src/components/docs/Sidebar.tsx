@@ -82,7 +82,7 @@ export function Sidebar({
                         onClick={() => item.section && onNavigate(item.section)}
                         aria-current={isActive ? 'page' : undefined}
                         className={
-                          'flex items-center justify-between w-full px-3.5 py-2 text-sm rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
+                          'flex items-center justify-between w-full px-3 py-2 text-sm rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
                           (isActive
                             ? 'font-semibold text-slate-900 bg-[#EBF2FE]'
                             : clickable
