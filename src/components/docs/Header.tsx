@@ -57,12 +57,12 @@ export function Header({
         </div>
 
         {/* Right: Make Kit KAI Search Bar, Language Switcher & Quick Links */}
-        <div className="shrink-0 flex items-center gap-2.5">
+        <div className="shrink-0 flex items-center gap-3">
           {/* 1. Search Bar */}
           <button
             type="button"
             onClick={onOpenCommandMenu}
-            className="h-9 w-56 sm:w-64 md:w-72 flex items-center justify-between px-3 rounded-md border border-border/70 bg-background hover:bg-muted/60 hover:border-border text-xs transition-all cursor-pointer shadow-2xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="h-9 w-48 sm:w-56 md:w-60 flex items-center justify-between px-3 rounded-md border border-border/70 bg-background hover:bg-muted/60 hover:border-border text-xs transition-all cursor-pointer shadow-2xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             aria-label={t.search}
           >
             <div className="flex items-center gap-2 min-w-0">
