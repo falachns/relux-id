@@ -89,7 +89,6 @@ export function DocsLayout({
         onQuery={setQuery}
         onToggleMenu={() => setMenuOpen((o) => !o)}
         onHome={() => navigate('introduction')}
-        onManage={() => navigate('manage')}
         onOpenCommandMenu={() => setCommandOpen(true)}
       />
 
